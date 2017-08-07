@@ -1,0 +1,8 @@
+E:\工作\DataMonitor\DataMonitor\bin\Debug\DataMonitor.exe.config
+E:\工作\DataMonitor\DataMonitor\bin\Debug\DataMonitor.exe
+E:\工作\DataMonitor\DataMonitor\bin\Debug\DataMonitor.pdb
+E:\工作\DataMonitor\DataMonitor\bin\Debug\Cowboy.Sockets.dll
+E:\工作\DataMonitor\DataMonitor\bin\Debug\Logrila.Logging.dll
+E:\工作\DataMonitor\DataMonitor\obj\Debug\DataMonitor.csprojResolveAssemblyReference.cache
+E:\工作\DataMonitor\DataMonitor\obj\Debug\DataMonitor.exe
+E:\工作\DataMonitor\DataMonitor\obj\Debug\DataMonitor.pdb
