@@ -11,6 +11,10 @@ namespace DataMonitor
         byte[] _bytes;
 
         byte[] temp = new byte[2];
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="bytes">body Bytes</param>
         public DataParser(byte[] bytes)
         {
             this._bytes = bytes;

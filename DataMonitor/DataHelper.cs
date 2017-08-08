@@ -82,6 +82,23 @@ namespace DataMonitor
 
             return temp;
         }
+        public static double ConvertData(int source)
+        {
 
+            var data = source;
+            if (data < 10)
+            {
+                data = data * 1000;
+            }
+            else if (data < 100)
+            {
+                data = data * 100;
+            }
+            else if (data < 1000)
+            {
+                data = data * 10;
+            }
+            return data * 0.01;
+        }
     }
 }

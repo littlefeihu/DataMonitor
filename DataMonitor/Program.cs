@@ -1,4 +1,5 @@
 ﻿using Cowboy.Sockets;
+using DataMonitor.Message;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,8 @@ namespace DataMonitor
 
         static void Main(string[] args)
         {
+            //3C 04 0A 02 04 C8 00 70 03 66 F1
+            Console.WriteLine(DataHelper.ConvertToIntFromHex("FFFF"));
             ConnectToServer();
             Console.WriteLine("TCP客户端已连接到服务器");
             Console.WriteLine("现在可以给服务器发送指令了");
@@ -30,28 +33,24 @@ namespace DataMonitor
                     {
                         if (string.IsNullOrEmpty(text))
                         {
-                            //获取温度湿度 250301FF0066
-                            //获取采集保存间隔250308DD0066
-                            //获取历史总包数历史总条数250306AA0066
-
+                            //获取温度湿度 250301FF0066已解析
+                            //获取采集保存间隔250308DD0066已解析
+                            //获取历史总包数历史总条数250306AA0066已解析
+                            //下载历史数据250306AA0201000066
 
 
                             //修改节点地址
-                            //选中设备,获取设备硬件软件版本号25080CAA0066
+                            //获取设备硬件软件版本号25080CAA0066
                             //设置设备地址25070255010B66
 
-                            //读温度报警值25030A010066
-                            //读湿度报警值25030A020066
+                            //读温度报警值上限下限25030A010066已解析
+                            //读湿度报警值上限下限25030A020066已解析
 
                             //写温度报警值25030A01040A00DE0366
                             //写湿度报警值25030A0204C800700366
-
-
                             //读温湿度报警状态25030ABB0066
-                          
 
-
-                            //读取保存间隔250308DD0066
+                            //读取保存间隔250308DD0066已解析
                             //设置保存间隔 写分钟   记录间隔 存储容量
                             //250308DD0305E80366
                             //设置保存间隔 写小时
@@ -59,19 +58,18 @@ namespace DataMonitor
 
                             //清空历史记录
                             //250309FF0066
+                            //读取设备日期时间已解析
+                            //250308CC0066
 
 
-                            //读取时间
-                            //250008CC0066
                             //设置时间
-                            //250008BB0617071618303066
-                            //下载历史数据250306AA020100
-                            //设置温度报警25030AAA010166
-                            //设置湿度报警25030AAA010266
-                            //设置温湿度报警25030AAA010366
+                            //250308BB0617071618303066
+                            //开启温度报警25030AAA010166
+                            //开启湿度报警25030AAA010266
+                            //开启温湿度报警25030AAA010366
                             //关闭温湿度报警25030AAA010066
 
-                            text = "250506AA0066";
+                            text = "250401FF0066";
                         }
                         var cmdbytes = new GetDataCommand(text).GetCommandBytes();
 
@@ -117,6 +115,16 @@ namespace DataMonitor
         {
             var msgItem = new MsgItem(e.Data, e.DataOffset, e.DataLength);
             Console.WriteLine(msgItem.GetHexString());
+
+            //new DownloadHistoryDataAction().Excute(msgItem.BodyBytes);
+            //new GetCollectionInternalAction().Excute(msgItem.BodyBytes);
+            //new GetPackageCountAction().Excute(msgItem.BodyBytes);
+            // new ReadTemperatureAlarmNumAction().Excute(msgItem.BodyBytes);
+            //new ReadHumidityMsgAction().Excute(msgItem.BodyBytes);
+            // new GetTemperatureAndHumidityAction().Excute(msgItem.BodyBytes);
+            //new ReadSaveIntervalAction().Excute(msgItem.BodyBytes);
+            //new GetDeviceDatetimeAction().Excute(msgItem.BodyBytes);
+
             //var data = new DataParser(msgItem.BodyBytes);
             // Console.WriteLine("设备上传温度{0}，湿度{1}", data.Temperature, data.Humidity);
         }

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace DataMonitor
 {
-    public abstract class BaseAction
+    public interface IBaseAction
     {
+        string CommandHex
+        {
+            get;
+        }
+        void Excute(byte[] body);
     }
 }
