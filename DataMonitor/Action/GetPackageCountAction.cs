@@ -29,10 +29,10 @@ namespace DataMonitor.Message
             //历史总包数
             Array.Copy(body, 2, temp, 0, 2);
             int hisPackageTotal = DataHelper.ConvertToIntFromHex(DataHelper.byteToHexStr(temp));
-            //包内容长度
-            Array.Copy(body, 4, temp, 0, 2);
-            int hisPackageContentTotal = DataHelper.ConvertToIntFromHex(DataHelper.byteToHexStr(temp));
-            Console.WriteLine("历史总条数{0},历史总包数{1},包内容长度{2}", hisTotal, hisPackageTotal, hisPackageContentTotal);
+            ////包内容长度
+            //Array.Copy(body, 4, temp, 0, 2);
+            //int hisPackageContentTotal = DataHelper.ConvertToIntFromHex(DataHelper.byteToHexStr(temp));
+            Console.WriteLine("历史总条数{0},历史总包数{1}", hisTotal, hisPackageTotal);
 
         }
     }

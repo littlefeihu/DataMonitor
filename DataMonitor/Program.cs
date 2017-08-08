@@ -15,8 +15,8 @@ namespace DataMonitor
 
         static void Main(string[] args)
         {
-            //3C 04 0A 02 04 C8 00 70 03 66 F1
-            Console.WriteLine(DataHelper.ConvertToIntFromHex("FFFF"));
+            //3C 04 0C AA 08 31 2E 33 35 32 2E 30 32 66 ED
+            Console.WriteLine(DataHelper.ConvertToIntFromHex("01ea"));
             ConnectToServer();
             Console.WriteLine("TCP客户端已连接到服务器");
             Console.WriteLine("现在可以给服务器发送指令了");
@@ -35,8 +35,8 @@ namespace DataMonitor
                         {
                             //获取温度湿度 250301FF0066已解析
                             //获取采集保存间隔250308DD0066已解析
-                            //获取历史总包数历史总条数250306AA0066已解析
-                            //下载历史数据250306AA0201000066
+                            //获取历史总包数历史总条数250306AA0066已解析待验证
+                            //下载历史数据250306AA0201000066已解析待验证
 
 
                             //修改节点地址
@@ -121,7 +121,7 @@ namespace DataMonitor
             //new GetPackageCountAction().Excute(msgItem.BodyBytes);
             // new ReadTemperatureAlarmNumAction().Excute(msgItem.BodyBytes);
             //new ReadHumidityMsgAction().Excute(msgItem.BodyBytes);
-            // new GetTemperatureAndHumidityAction().Excute(msgItem.BodyBytes);
+            new GetTemperatureAndHumidityAction().Excute(msgItem.BodyBytes);
             //new ReadSaveIntervalAction().Excute(msgItem.BodyBytes);
             //new GetDeviceDatetimeAction().Excute(msgItem.BodyBytes);
 
