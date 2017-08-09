@@ -16,7 +16,7 @@ namespace DataMonitor
         static void Main(string[] args)
         {
             //3C 04 0C AA 08 31 2E 33 35 32 2E 30 32 66 ED
-            Console.WriteLine(DataHelper.ConvertToIntFromHex("01ea"));
+            Console.WriteLine(DataHelper.ConvertToIntFromHex("01e9"));
             ConnectToServer();
             Console.WriteLine("TCP客户端已连接到服务器");
             Console.WriteLine("现在可以给服务器发送指令了");
@@ -116,12 +116,12 @@ namespace DataMonitor
             var msgItem = new MsgItem(e.Data, e.DataOffset, e.DataLength);
             Console.WriteLine(msgItem.GetHexString());
 
-            //new DownloadHistoryDataAction().Excute(msgItem.BodyBytes);
+            new DownloadHistoryDataAction().Excute(msgItem.BodyBytes);
             //new GetCollectionInternalAction().Excute(msgItem.BodyBytes);
             //new GetPackageCountAction().Excute(msgItem.BodyBytes);
             // new ReadTemperatureAlarmNumAction().Excute(msgItem.BodyBytes);
             //new ReadHumidityMsgAction().Excute(msgItem.BodyBytes);
-            new GetTemperatureAndHumidityAction().Excute(msgItem.BodyBytes);
+            //new GetTemperatureAndHumidityAction().Excute(msgItem.BodyBytes);
             //new ReadSaveIntervalAction().Excute(msgItem.BodyBytes);
             //new GetDeviceDatetimeAction().Excute(msgItem.BodyBytes);
 

@@ -25,10 +25,10 @@ namespace DataMonitor.Message
             //历史总条数
             byte[] temp = new byte[2];
             Array.Copy(body, 0, temp, 0, 2);
-            int hisTotal = DataHelper.ConvertToIntFromHex(DataHelper.byteToHexStr(temp));
+            int hisTotal = DataHelper.ConvertToIntFromHex(DataHelper.byteToHexStr(temp.Reverse().ToArray()));
             //历史总包数
             Array.Copy(body, 2, temp, 0, 2);
-            int hisPackageTotal = DataHelper.ConvertToIntFromHex(DataHelper.byteToHexStr(temp));
+            int hisPackageTotal = DataHelper.ConvertToIntFromHex(DataHelper.byteToHexStr(temp.Reverse().ToArray()));
             ////包内容长度
             //Array.Copy(body, 4, temp, 0, 2);
             //int hisPackageContentTotal = DataHelper.ConvertToIntFromHex(DataHelper.byteToHexStr(temp));
