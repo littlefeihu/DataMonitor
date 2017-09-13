@@ -48,12 +48,12 @@
             this.superTabItem2 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabItem3 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
-            this.superTabItem4 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.superTabItem5 = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.superTabItem6 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabItem4 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.superTabItem6 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.superTabItem5 = new DevComponents.DotNetBar.SuperTabItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.realtimeControl1 = new DataMonitor.UI.Controls.RealtimeControl();
             this.flowLayoutPanel1.SuspendLayout();
@@ -79,7 +79,7 @@
             // 
             // styleManager1
             // 
-            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Metro;
+            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2007Blue;
             this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154))))));
             // 
             // buttonX1
@@ -218,11 +218,14 @@
             // 
             // labelItem1
             // 
+            this.labelItem1.ForeColor = System.Drawing.Color.White;
             this.labelItem1.Name = "labelItem1";
             this.labelItem1.Text = "用户名：无";
             // 
             // currentTiem
             // 
+            this.currentTiem.BorderSide = DevComponents.DotNetBar.eBorderSide.None;
+            this.currentTiem.ForeColor = System.Drawing.Color.White;
             this.currentTiem.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Far;
             this.currentTiem.Name = "currentTiem";
             this.currentTiem.Text = "当前时间";
@@ -247,6 +250,7 @@
             // 
             // superTabControl1
             // 
+            this.superTabControl1.AntiAlias = false;
             this.superTabControl1.BackColor = System.Drawing.Color.White;
             // 
             // 
@@ -264,8 +268,8 @@
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
             this.superTabControl1.Controls.Add(this.superTabControlPanel1);
-            this.superTabControl1.Controls.Add(this.superTabControlPanel3);
             this.superTabControl1.Controls.Add(this.superTabControlPanel2);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel3);
             this.superTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControl1.ForeColor = System.Drawing.Color.Black;
             this.superTabControl1.Location = new System.Drawing.Point(0, 77);
@@ -284,13 +288,6 @@
             this.superTabControl1.Text = "superTabControl1";
             this.superTabControl1.SelectedTabChanged += new System.EventHandler<DevComponents.DotNetBar.SuperTabStripSelectedTabChangedEventArgs>(this.superTabControl1_SelectedTabChanged);
             // 
-            // superTabItem4
-            // 
-            this.superTabItem4.AttachedControl = this.superTabControlPanel1;
-            this.superTabItem4.GlobalItem = false;
-            this.superTabItem4.Name = "superTabItem4";
-            this.superTabItem4.Text = "实时界面";
-            // 
             // superTabControlPanel1
             // 
             this.superTabControlPanel1.Controls.Add(this.realtimeControl1);
@@ -301,12 +298,33 @@
             this.superTabControlPanel1.TabIndex = 1;
             this.superTabControlPanel1.TabItem = this.superTabItem4;
             // 
-            // superTabItem5
+            // superTabItem4
             // 
-            this.superTabItem5.AttachedControl = this.superTabControlPanel2;
-            this.superTabItem5.GlobalItem = false;
-            this.superTabItem5.Name = "superTabItem5";
-            this.superTabItem5.Text = "历史信息";
+            this.superTabItem4.AttachedControl = this.superTabControlPanel1;
+            this.superTabItem4.FixedTabSize = new System.Drawing.Size(100, 0);
+            this.superTabItem4.GlobalItem = false;
+            this.superTabItem4.Name = "superTabItem4";
+            this.superTabItem4.Text = "实时界面";
+            this.superTabItem4.TextAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
+            // 
+            // superTabControlPanel3
+            // 
+            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 26);
+            this.superTabControlPanel3.Name = "superTabControlPanel3";
+            this.superTabControlPanel3.Size = new System.Drawing.Size(810, 423);
+            this.superTabControlPanel3.TabIndex = 0;
+            this.superTabControlPanel3.TabItem = this.superTabItem6;
+            // 
+            // superTabItem6
+            // 
+            this.superTabItem6.AttachedControl = this.superTabControlPanel3;
+            this.superTabItem6.FixedTabSize = new System.Drawing.Size(100, 0);
+            this.superTabItem6.GlobalItem = false;
+            this.superTabItem6.Name = "superTabItem6";
+            this.superTabItem6.Stretch = true;
+            this.superTabItem6.Text = "GPS地图";
+            this.superTabItem6.TextAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
             // 
             // superTabControlPanel2
             // 
@@ -317,21 +335,14 @@
             this.superTabControlPanel2.TabIndex = 0;
             this.superTabControlPanel2.TabItem = this.superTabItem5;
             // 
-            // superTabItem6
+            // superTabItem5
             // 
-            this.superTabItem6.AttachedControl = this.superTabControlPanel3;
-            this.superTabItem6.GlobalItem = false;
-            this.superTabItem6.Name = "superTabItem6";
-            this.superTabItem6.Text = "GPS地图";
-            // 
-            // superTabControlPanel3
-            // 
-            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 26);
-            this.superTabControlPanel3.Name = "superTabControlPanel3";
-            this.superTabControlPanel3.Size = new System.Drawing.Size(810, 423);
-            this.superTabControlPanel3.TabIndex = 0;
-            this.superTabControlPanel3.TabItem = this.superTabItem6;
+            this.superTabItem5.AttachedControl = this.superTabControlPanel2;
+            this.superTabItem5.FixedTabSize = new System.Drawing.Size(100, 0);
+            this.superTabItem5.GlobalItem = false;
+            this.superTabItem5.Name = "superTabItem5";
+            this.superTabItem5.Text = "历史信息";
+            this.superTabItem5.TextAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
             // 
             // realtimeControl1
             // 
@@ -393,14 +404,5 @@
         private DevComponents.DotNetBar.SuperTabItem superTabItem5;
         private System.Windows.Forms.Timer timer1;
         private Controls.RealtimeControl realtimeControl1;
-
-
-
-
-
-
-
-
-
     }
 }

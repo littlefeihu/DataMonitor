@@ -21,5 +21,14 @@ namespace DataMonitor.UI.Controls
         {
 
         }
+
+        private void buttonX3_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void buttonX3_Click(object sender, EventArgs e)
+        {
+            buttonX3.Checked = !buttonX3.Checked;
+        }
     }
 }

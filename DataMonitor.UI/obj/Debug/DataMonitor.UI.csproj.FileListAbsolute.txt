@@ -10,3 +10,16 @@ E:\工作\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.csprojResolveAssem
 E:\工作\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.Controls.GPSControl.resources
 E:\工作\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.Controls.HistoricalDataControl.resources
 E:\工作\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.Controls.RealtimeControl.resources
+D:\work\DataMonitor\DataMonitor.UI\bin\Debug\DataMonitor.UI.exe.config
+D:\work\DataMonitor\DataMonitor.UI\bin\Debug\DataMonitor.UI.exe
+D:\work\DataMonitor\DataMonitor.UI\bin\Debug\DataMonitor.UI.pdb
+D:\work\DataMonitor\DataMonitor.UI\bin\Debug\DevComponents.DotNetBar2.dll
+D:\work\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.csprojResolveAssemblyReference.cache
+D:\work\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.Controls.GPSControl.resources
+D:\work\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.Controls.HistoricalDataControl.resources
+D:\work\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.Controls.RealtimeControl.resources
+D:\work\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.MainForm.resources
+D:\work\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.Properties.Resources.resources
+D:\work\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.csproj.GenerateResource.Cache
+D:\work\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.exe
+D:\work\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.pdb
