@@ -45,11 +45,13 @@
             this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.deviceItem3 = new DataMonitor.UI.Controls.DeviceItem();
             this.deviceItem4 = new DataMonitor.UI.Controls.DeviceItem();
             this.deviceItem1 = new DataMonitor.UI.Controls.DeviceItem();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // itemPanel1
@@ -99,14 +101,15 @@
             // 
             this.sideBar1.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
             this.sideBar1.BackColor = System.Drawing.Color.SkyBlue;
-            this.sideBar1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sideBar1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sideBar1.ExpandedPanel = this.sideBarPanelItem1;
             this.sideBar1.ForeColor = System.Drawing.Color.White;
-            this.sideBar1.Location = new System.Drawing.Point(0, 0);
+            this.sideBar1.Location = new System.Drawing.Point(3, 3);
             this.sideBar1.Name = "sideBar1";
             this.sideBar1.Panels.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sideBarPanelItem1});
-            this.sideBar1.Size = new System.Drawing.Size(151, 507);
+            this.tableLayoutPanel1.SetRowSpan(this.sideBar1, 2);
+            this.sideBar1.Size = new System.Drawing.Size(145, 501);
             this.sideBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2000;
             this.sideBar1.TabIndex = 4;
             this.sideBar1.Text = "sideBar1";
@@ -177,13 +180,14 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flowLayoutPanel1.Controls.Add(this.deviceItem3);
             this.flowLayoutPanel1.Controls.Add(this.deviceItem4);
             this.flowLayoutPanel1.Controls.Add(this.deviceItem1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(151, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(154, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(860, 507);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(854, 456);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // flowLayoutPanel2
@@ -192,19 +196,19 @@
             this.flowLayoutPanel2.Controls.Add(this.buttonX4);
             this.flowLayoutPanel2.Controls.Add(this.buttonX3);
             this.flowLayoutPanel2.Controls.Add(this.buttonX2);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(151, 465);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(154, 465);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(860, 42);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(854, 39);
             this.flowLayoutPanel2.TabIndex = 10;
             // 
             // buttonX5
             // 
             this.buttonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX5.Location = new System.Drawing.Point(782, 8);
+            this.buttonX5.Location = new System.Drawing.Point(776, 8);
             this.buttonX5.Name = "buttonX5";
             this.buttonX5.Size = new System.Drawing.Size(75, 23);
             this.buttonX5.TabIndex = 16;
@@ -214,7 +218,7 @@
             // 
             this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX4.Location = new System.Drawing.Point(701, 8);
+            this.buttonX4.Location = new System.Drawing.Point(695, 8);
             this.buttonX4.Name = "buttonX4";
             this.buttonX4.Size = new System.Drawing.Size(75, 23);
             this.buttonX4.TabIndex = 17;
@@ -224,7 +228,7 @@
             // 
             this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX3.Location = new System.Drawing.Point(620, 8);
+            this.buttonX3.Location = new System.Drawing.Point(614, 8);
             this.buttonX3.Name = "buttonX3";
             this.buttonX3.Size = new System.Drawing.Size(75, 23);
             this.buttonX3.TabIndex = 18;
@@ -234,11 +238,29 @@
             // 
             this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Location = new System.Drawing.Point(539, 8);
+            this.buttonX2.Location = new System.Drawing.Point(533, 8);
             this.buttonX2.Name = "buttonX2";
             this.buttonX2.Size = new System.Drawing.Size(75, 23);
             this.buttonX2.TabIndex = 19;
             this.buttonX2.Text = "首页";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.sideBar1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 1, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1011, 507);
+            this.tableLayoutPanel1.TabIndex = 11;
             // 
             // deviceItem3
             // 
@@ -265,13 +287,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.sideBar1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "RealtimeControl";
             this.Size = new System.Drawing.Size(1011, 507);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -297,5 +318,6 @@
         private DevComponents.DotNetBar.ButtonX buttonX4;
         private DevComponents.DotNetBar.ButtonX buttonX3;
         private DevComponents.DotNetBar.ButtonX buttonX2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

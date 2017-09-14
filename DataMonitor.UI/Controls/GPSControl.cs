@@ -15,6 +15,8 @@ namespace DataMonitor.UI.Controls
         public GPSControl()
         {
             InitializeComponent();
+            dtstarttime.Value = DateTime.Now.AddDays(-1);
+            dtendtime.Value = DateTime.Now;
         }
     }
 }
