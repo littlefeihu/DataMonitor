@@ -106,7 +106,7 @@
             this.sideBar1.Name = "sideBar1";
             this.sideBar1.Panels.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sideBarPanelItem1});
-            this.sideBar1.Size = new System.Drawing.Size(105, 507);
+            this.sideBar1.Size = new System.Drawing.Size(151, 507);
             this.sideBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2000;
             this.sideBar1.TabIndex = 4;
             this.sideBar1.Text = "sideBar1";
@@ -181,9 +181,9 @@
             this.flowLayoutPanel1.Controls.Add(this.deviceItem4);
             this.flowLayoutPanel1.Controls.Add(this.deviceItem1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(105, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(151, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(553, 507);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(860, 507);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // flowLayoutPanel2
@@ -194,17 +194,17 @@
             this.flowLayoutPanel2.Controls.Add(this.buttonX2);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(105, 465);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(151, 465);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(553, 42);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(860, 42);
             this.flowLayoutPanel2.TabIndex = 10;
             // 
             // buttonX5
             // 
             this.buttonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX5.Location = new System.Drawing.Point(475, 8);
+            this.buttonX5.Location = new System.Drawing.Point(782, 8);
             this.buttonX5.Name = "buttonX5";
             this.buttonX5.Size = new System.Drawing.Size(75, 23);
             this.buttonX5.TabIndex = 16;
@@ -214,7 +214,7 @@
             // 
             this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX4.Location = new System.Drawing.Point(394, 8);
+            this.buttonX4.Location = new System.Drawing.Point(701, 8);
             this.buttonX4.Name = "buttonX4";
             this.buttonX4.Size = new System.Drawing.Size(75, 23);
             this.buttonX4.TabIndex = 17;
@@ -224,7 +224,7 @@
             // 
             this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX3.Location = new System.Drawing.Point(313, 8);
+            this.buttonX3.Location = new System.Drawing.Point(620, 8);
             this.buttonX3.Name = "buttonX3";
             this.buttonX3.Size = new System.Drawing.Size(75, 23);
             this.buttonX3.TabIndex = 18;
@@ -234,7 +234,7 @@
             // 
             this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Location = new System.Drawing.Point(232, 8);
+            this.buttonX2.Location = new System.Drawing.Point(539, 8);
             this.buttonX2.Name = "buttonX2";
             this.buttonX2.Size = new System.Drawing.Size(75, 23);
             this.buttonX2.TabIndex = 19;
@@ -249,14 +249,14 @@
             // 
             // deviceItem4
             // 
-            this.deviceItem4.Location = new System.Drawing.Point(3, 168);
+            this.deviceItem4.Location = new System.Drawing.Point(297, 3);
             this.deviceItem4.Name = "deviceItem4";
             this.deviceItem4.Size = new System.Drawing.Size(288, 159);
             this.deviceItem4.TabIndex = 3;
             // 
             // deviceItem1
             // 
-            this.deviceItem1.Location = new System.Drawing.Point(3, 333);
+            this.deviceItem1.Location = new System.Drawing.Point(3, 168);
             this.deviceItem1.Name = "deviceItem1";
             this.deviceItem1.Size = new System.Drawing.Size(288, 159);
             this.deviceItem1.TabIndex = 0;
@@ -269,7 +269,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.sideBar1);
             this.Name = "RealtimeControl";
-            this.Size = new System.Drawing.Size(658, 507);
+            this.Size = new System.Drawing.Size(1011, 507);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
