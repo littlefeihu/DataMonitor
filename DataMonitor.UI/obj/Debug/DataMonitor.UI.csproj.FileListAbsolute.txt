@@ -23,3 +23,4 @@ D:\work\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.Properties.Resources
 D:\work\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.csproj.GenerateResource.Cache
 D:\work\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.exe
 D:\work\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.pdb
+E:\工作\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.Controls.DeviceItem.resources

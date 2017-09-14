@@ -10,14 +10,11 @@ using System.Windows.Forms;
 
 namespace DataMonitor.UI.Controls
 {
-    public partial class RealtimeControl : UserControl
+    public partial class DeviceItem : UserControl
     {
-        public RealtimeControl()
+        public DeviceItem()
         {
             InitializeComponent();
         }
-
-
-     
     }
 }

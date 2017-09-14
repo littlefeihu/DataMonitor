@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\DeviceItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DeviceItem.Designer.cs">
+      <DependentUpon>DeviceItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\GPSControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\DeviceItem.resx">
+      <DependentUpon>DeviceItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\GPSControl.resx">
       <DependentUpon>GPSControl.cs</DependentUpon>
     </EmbeddedResource>
