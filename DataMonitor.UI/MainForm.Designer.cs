@@ -52,12 +52,21 @@
             this.realtimeControl1 = new DataMonitor.UI.Controls.RealtimeControl();
             this.superTabItem4 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.gpsControl1 = new DataMonitor.UI.Controls.GPSControl();
             this.superTabItem6 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.historicalDataControl1 = new DataMonitor.UI.Controls.HistoricalDataControl();
             this.superTabItem5 = new DevComponents.DotNetBar.SuperTabItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.gpsControl1 = new DataMonitor.UI.Controls.GPSControl();
+            this.dotNetBarManager1 = new DevComponents.DotNetBar.DotNetBarManager(this.components);
+            this.dockSite1 = new DevComponents.DotNetBar.DockSite();
+            this.dockSite2 = new DevComponents.DotNetBar.DockSite();
+            this.dockSite3 = new DevComponents.DotNetBar.DockSite();
+            this.dockSite4 = new DevComponents.DotNetBar.DockSite();
+            this.dockSite5 = new DevComponents.DotNetBar.DockSite();
+            this.dockSite6 = new DevComponents.DotNetBar.DockSite();
+            this.dockSite7 = new DevComponents.DotNetBar.DockSite();
+            this.dockSite8 = new DevComponents.DotNetBar.DockSite();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
@@ -170,6 +179,7 @@
             this.buttonX6.TabIndex = 5;
             this.buttonX6.Text = "设置";
             this.buttonX6.TextColor = System.Drawing.Color.White;
+            this.buttonX6.Click += new System.EventHandler(this.buttonX6_Click);
             // 
             // buttonX7
             // 
@@ -272,8 +282,8 @@
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
             this.superTabControl1.ControlBox.Visible = false;
-            this.superTabControl1.Controls.Add(this.superTabControlPanel3);
             this.superTabControl1.Controls.Add(this.superTabControlPanel1);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel3);
             this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControl1.ForeColor = System.Drawing.Color.Black;
@@ -330,6 +340,14 @@
             this.superTabControlPanel3.TabIndex = 0;
             this.superTabControlPanel3.TabItem = this.superTabItem6;
             // 
+            // gpsControl1
+            // 
+            this.gpsControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gpsControl1.Location = new System.Drawing.Point(0, 0);
+            this.gpsControl1.Name = "gpsControl1";
+            this.gpsControl1.Size = new System.Drawing.Size(982, 576);
+            this.gpsControl1.TabIndex = 0;
+            // 
             // superTabItem6
             // 
             this.superTabItem6.AttachedControl = this.superTabControlPanel3;
@@ -367,13 +385,112 @@
             this.superTabItem5.Text = "历史信息";
             this.superTabItem5.TextAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
             // 
-            // gpsControl1
+            // dotNetBarManager1
             // 
-            this.gpsControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gpsControl1.Location = new System.Drawing.Point(0, 0);
-            this.gpsControl1.Name = "gpsControl1";
-            this.gpsControl1.Size = new System.Drawing.Size(982, 576);
-            this.gpsControl1.TabIndex = 0;
+            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.F1);
+            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlC);
+            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlA);
+            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlV);
+            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlX);
+            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlZ);
+            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlY);
+            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.Del);
+            this.dotNetBarManager1.AutoDispatchShortcuts.Add(DevComponents.DotNetBar.eShortcut.Ins);
+            this.dotNetBarManager1.BottomDockSite = this.dockSite4;
+            this.dotNetBarManager1.EnableFullSizeDock = false;
+            this.dotNetBarManager1.LeftDockSite = this.dockSite1;
+            this.dotNetBarManager1.ParentForm = this;
+            this.dotNetBarManager1.RightDockSite = this.dockSite2;
+            this.dotNetBarManager1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.dotNetBarManager1.ToolbarBottomDockSite = this.dockSite8;
+            this.dotNetBarManager1.ToolbarLeftDockSite = this.dockSite5;
+            this.dotNetBarManager1.ToolbarRightDockSite = this.dockSite6;
+            this.dotNetBarManager1.ToolbarTopDockSite = this.dockSite7;
+            this.dotNetBarManager1.TopDockSite = this.dockSite3;
+            // 
+            // dockSite1
+            // 
+            this.dockSite1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dockSite1.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
+            this.dockSite1.Location = new System.Drawing.Point(0, 77);
+            this.dockSite1.Name = "dockSite1";
+            this.dockSite1.Size = new System.Drawing.Size(0, 602);
+            this.dockSite1.TabIndex = 11;
+            this.dockSite1.TabStop = false;
+            // 
+            // dockSite2
+            // 
+            this.dockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dockSite2.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
+            this.dockSite2.Location = new System.Drawing.Point(982, 77);
+            this.dockSite2.Name = "dockSite2";
+            this.dockSite2.Size = new System.Drawing.Size(0, 602);
+            this.dockSite2.TabIndex = 12;
+            this.dockSite2.TabStop = false;
+            // 
+            // dockSite3
+            // 
+            this.dockSite3.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dockSite3.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
+            this.dockSite3.Location = new System.Drawing.Point(0, 0);
+            this.dockSite3.Name = "dockSite3";
+            this.dockSite3.Size = new System.Drawing.Size(982, 0);
+            this.dockSite3.TabIndex = 13;
+            this.dockSite3.TabStop = false;
+            // 
+            // dockSite4
+            // 
+            this.dockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dockSite4.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
+            this.dockSite4.Location = new System.Drawing.Point(0, 701);
+            this.dockSite4.Name = "dockSite4";
+            this.dockSite4.Size = new System.Drawing.Size(982, 0);
+            this.dockSite4.TabIndex = 14;
+            this.dockSite4.TabStop = false;
+            // 
+            // dockSite5
+            // 
+            this.dockSite5.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dockSite5.Location = new System.Drawing.Point(0, 0);
+            this.dockSite5.Name = "dockSite5";
+            this.dockSite5.Size = new System.Drawing.Size(0, 701);
+            this.dockSite5.TabIndex = 15;
+            this.dockSite5.TabStop = false;
+            // 
+            // dockSite6
+            // 
+            this.dockSite6.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dockSite6.Location = new System.Drawing.Point(982, 0);
+            this.dockSite6.Name = "dockSite6";
+            this.dockSite6.Size = new System.Drawing.Size(0, 701);
+            this.dockSite6.TabIndex = 16;
+            this.dockSite6.TabStop = false;
+            // 
+            // dockSite7
+            // 
+            this.dockSite7.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dockSite7.Location = new System.Drawing.Point(0, 0);
+            this.dockSite7.Name = "dockSite7";
+            this.dockSite7.Size = new System.Drawing.Size(982, 0);
+            this.dockSite7.TabIndex = 17;
+            this.dockSite7.TabStop = false;
+            // 
+            // dockSite8
+            // 
+            this.dockSite8.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dockSite8.Location = new System.Drawing.Point(0, 701);
+            this.dockSite8.Name = "dockSite8";
+            this.dockSite8.Size = new System.Drawing.Size(982, 0);
+            this.dockSite8.TabIndex = 18;
+            this.dockSite8.TabStop = false;
             // 
             // MainForm
             // 
@@ -382,9 +499,17 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(982, 701);
+            this.Controls.Add(this.dockSite2);
+            this.Controls.Add(this.dockSite1);
             this.Controls.Add(this.superTabControl1);
             this.Controls.Add(this.metroStatusBar1);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.dockSite3);
+            this.Controls.Add(this.dockSite4);
+            this.Controls.Add(this.dockSite5);
+            this.Controls.Add(this.dockSite6);
+            this.Controls.Add(this.dockSite7);
+            this.Controls.Add(this.dockSite8);
             this.DoubleBuffered = true;
             this.Name = "MainForm";
             this.Text = "安徽东青信息数据监测系统";
@@ -431,5 +556,14 @@
         private Controls.RealtimeControl realtimeControl1;
         private Controls.HistoricalDataControl historicalDataControl1;
         private Controls.GPSControl gpsControl1;
+        private DevComponents.DotNetBar.DotNetBarManager dotNetBarManager1;
+        private DevComponents.DotNetBar.DockSite dockSite4;
+        private DevComponents.DotNetBar.DockSite dockSite1;
+        private DevComponents.DotNetBar.DockSite dockSite2;
+        private DevComponents.DotNetBar.DockSite dockSite3;
+        private DevComponents.DotNetBar.DockSite dockSite5;
+        private DevComponents.DotNetBar.DockSite dockSite6;
+        private DevComponents.DotNetBar.DockSite dockSite7;
+        private DevComponents.DotNetBar.DockSite dockSite8;
     }
 }

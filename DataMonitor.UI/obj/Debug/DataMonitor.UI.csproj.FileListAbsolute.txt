@@ -24,3 +24,4 @@ D:\work\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.csproj.GenerateResou
 D:\work\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.exe
 D:\work\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.pdb
 E:\工作\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.Controls.DeviceItem.resources
+E:\工作\DataMonitor\DataMonitor.UI\obj\Debug\DataMonitor.UI.Login.resources
