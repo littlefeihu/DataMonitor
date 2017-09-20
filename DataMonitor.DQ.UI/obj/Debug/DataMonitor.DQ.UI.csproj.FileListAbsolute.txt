@@ -1,0 +1,9 @@
+E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\DataMonitor.DQ.UI.exe.config
+E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\DataMonitor.DQ.UI.exe
+E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\DataMonitor.DQ.UI.pdb
+E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.csprojResolveAssemblyReference.cache
+E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.Properties.Resources.resources
+E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.csproj.GenerateResource.Cache
+E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.exe
+E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.pdb
+E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.Form.resources

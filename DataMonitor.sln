@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMonitor.UI", "DataMonit
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{3261091B-14D5-4C4A-991D-A798BA544A01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMonitor.DQ.UI", "DataMonitor.DQ.UI\DataMonitor.DQ.UI.csproj", "{12EE455B-7C28-409F-8C64-E181C432D743}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{F4392A5E-0A7F-40F5-8157-236A197BA88F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4392A5E-0A7F-40F5-8157-236A197BA88F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4392A5E-0A7F-40F5-8157-236A197BA88F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12EE455B-7C28-409F-8C64-E181C432D743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12EE455B-7C28-409F-8C64-E181C432D743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12EE455B-7C28-409F-8C64-E181C432D743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12EE455B-7C28-409F-8C64-E181C432D743}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
