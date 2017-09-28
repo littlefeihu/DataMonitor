@@ -1,0 +1,4 @@
+E:\工作\DataMonitor\DataMonotor.Infrastructure\bin\Debug\DataMonitor.DQ.Infrastructure.dll
+E:\工作\DataMonitor\DataMonotor.Infrastructure\bin\Debug\DataMonitor.DQ.Infrastructure.pdb
+E:\工作\DataMonitor\DataMonotor.Infrastructure\obj\Debug\DataMonitor.DQ.Infrastructure.dll
+E:\工作\DataMonitor\DataMonotor.Infrastructure\obj\Debug\DataMonitor.DQ.Infrastructure.pdb

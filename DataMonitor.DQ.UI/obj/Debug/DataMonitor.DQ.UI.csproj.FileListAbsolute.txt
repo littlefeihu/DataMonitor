@@ -6,4 +6,9 @@ E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.Properties.R
 E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.csproj.GenerateResource.Cache
 E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.exe
 E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.pdb
-E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.Form.resources
+E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\DevComponents.DotNetBar2.dll
+E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\DevComponents.DotNetBar2.xml
+E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.Login.resources
+E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.UserControls.DeviceItem.resources
+E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.UserControls.RealtimeControl.resources
+E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.MainForm.resources
