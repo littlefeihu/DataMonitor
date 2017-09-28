@@ -30,10 +30,11 @@
         {
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtUserName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtPwd = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.chkRememberPassword = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.SuspendLayout();
             // 
             // labelX1
@@ -60,31 +61,32 @@
             this.labelX2.TabIndex = 1;
             this.labelX2.Text = "密码：";
             // 
-            // textBoxX1
+            // txtUserName
             // 
             // 
             // 
             // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX1.Location = new System.Drawing.Point(140, 53);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.PreventEnterBeep = true;
-            this.textBoxX1.Size = new System.Drawing.Size(186, 21);
-            this.textBoxX1.TabIndex = 2;
+            this.txtUserName.Border.Class = "TextBoxBorder";
+            this.txtUserName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtUserName.Location = new System.Drawing.Point(140, 53);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.PreventEnterBeep = true;
+            this.txtUserName.Size = new System.Drawing.Size(186, 21);
+            this.txtUserName.TabIndex = 2;
             // 
-            // textBoxX2
-            // 
-            // 
+            // txtPwd
             // 
             // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX2.Location = new System.Drawing.Point(140, 85);
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.PreventEnterBeep = true;
-            this.textBoxX2.Size = new System.Drawing.Size(186, 21);
-            this.textBoxX2.TabIndex = 3;
+            // 
+            // 
+            this.txtPwd.Border.Class = "TextBoxBorder";
+            this.txtPwd.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPwd.Location = new System.Drawing.Point(140, 85);
+            this.txtPwd.Name = "txtPwd";
+            this.txtPwd.PasswordChar = '*';
+            this.txtPwd.PreventEnterBeep = true;
+            this.txtPwd.Size = new System.Drawing.Size(186, 21);
+            this.txtPwd.TabIndex = 3;
             // 
             // buttonX1
             // 
@@ -108,16 +110,34 @@
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX2.TabIndex = 5;
             this.buttonX2.Text = "取消";
+            this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
+            // 
+            // chkRememberPassword
+            // 
+            // 
+            // 
+            // 
+            this.chkRememberPassword.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.chkRememberPassword.Checked = true;
+            this.chkRememberPassword.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkRememberPassword.CheckValue = "Y";
+            this.chkRememberPassword.Location = new System.Drawing.Point(140, 112);
+            this.chkRememberPassword.Name = "chkRememberPassword";
+            this.chkRememberPassword.Size = new System.Drawing.Size(100, 23);
+            this.chkRememberPassword.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.chkRememberPassword.TabIndex = 6;
+            this.chkRememberPassword.Text = "记住密码";
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(390, 203);
+            this.Controls.Add(this.chkRememberPassword);
             this.Controls.Add(this.buttonX2);
             this.Controls.Add(this.buttonX1);
-            this.Controls.Add(this.textBoxX2);
-            this.Controls.Add(this.textBoxX1);
+            this.Controls.Add(this.txtPwd);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
@@ -132,9 +152,10 @@
 
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtUserName;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPwd;
         private DevComponents.DotNetBar.ButtonX buttonX1;
         private DevComponents.DotNetBar.ButtonX buttonX2;
+        private DevComponents.DotNetBar.Controls.CheckBoxX chkRememberPassword;
     }
 }
