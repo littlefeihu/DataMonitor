@@ -12,3 +12,10 @@ E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.Login.resour
 E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.UserControls.DeviceItem.resources
 E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.UserControls.RealtimeControl.resources
 E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.MainForm.resources
+E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\x64\SQLite.Interop.dll
+E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\x86\SQLite.Interop.dll
+E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\EntityFramework.dll
+E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\EntityFramework.SqlServer.dll
+E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\System.Data.SQLite.EF6.dll
+E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\EntityFramework.xml
+E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\EntityFramework.SqlServer.xml

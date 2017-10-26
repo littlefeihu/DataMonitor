@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMonitor", "DataMonitor\DataMonitor.csproj", "{8D7462B4-A826-4C4F-9076-2869199F8AD9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMonitorTest", "DataMonitor\DataMonitorTest.csproj", "{8D7462B4-A826-4C4F-9076-2869199F8AD9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{3261091B-14D5-4C4A-991D-A798BA544A01}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMonitor.DQ.Infrastructure", "DataMonotor.Infrastructure\DataMonitor.DQ.Infrastructure.csproj", "{DA96AECB-D00E-4F46-B826-B0F0E9C46C3D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMonitor.DQ.BusinessLayer", "DataMonitor.DQ.BusinessLayer\DataMonitor.DQ.BusinessLayer.csproj", "{E289E122-FB08-40B8-82ED-8D239AC9D09D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{00C524C1-0192-42C4-81AD-9A48A4393DCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,5 +40,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8D7462B4-A826-4C4F-9076-2869199F8AD9} = {00C524C1-0192-42C4-81AD-9A48A4393DCF}
 	EndGlobalSection
 EndGlobal
