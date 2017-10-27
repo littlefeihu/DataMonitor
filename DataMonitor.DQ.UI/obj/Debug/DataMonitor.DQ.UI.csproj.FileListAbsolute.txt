@@ -25,3 +25,5 @@ E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.csproj.Gener
 E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.exe
 E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.pdb
 E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\Data\DataMonitorPrimary.db
+E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\Newtonsoft.Json.dll
+E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\Newtonsoft.Json.xml

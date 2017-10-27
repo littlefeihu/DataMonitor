@@ -23,21 +23,6 @@ namespace DataMonitor.DQ.UI
             this.EnableGlass = false;
             ReadUserProfile();
 
-            using (var db = new DBMonitorContext())
-            {
-                var user = db.UserInfos.FirstOrDefault();
-                var role = user.Role;
-                var modules = role.RoleModules.Select(o => o.Module).ToList();
-
-
-                var position = db.Positions.FirstOrDefault();
-
-                var devices = position.Devices.ToList();
-
-                MessageBox.Show(user.UserName + role.RoleName + modules.Count + position.PositionName + devices.Count);
-
-            }
-
         }
 
         private void buttonX1_Click(object sender, EventArgs e)

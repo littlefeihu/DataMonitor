@@ -2,3 +2,4 @@ E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\bin\Debug\DataMonitor.DQ.Busi
 E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\bin\Debug\DataMonitor.DQ.BusinessLayer.pdb
 E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\obj\Debug\DataMonitor.DQ.BusinessLayer.dll
 E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\obj\Debug\DataMonitor.DQ.BusinessLayer.pdb
+E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\obj\Debug\DataMonitor.DQ.BusinessLayer.csprojResolveAssemblyReference.cache

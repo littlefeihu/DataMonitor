@@ -40,6 +40,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -60,6 +63,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppException.cs" />
+    <Compile Include="AssemblyHelper.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="DataRepository\DBMonitorContext.cs" />
     <Compile Include="DataRepository\Models\Device.cs" />
     <Compile Include="DataRepository\Models\Entity.cs" />
@@ -68,7 +74,15 @@
     <Compile Include="DataRepository\Models\Role.cs" />
     <Compile Include="DataRepository\Models\RoleModule.cs" />
     <Compile Include="DataRepository\Models\UserInfo.cs" />
+    <Compile Include="DataValidateHelper.cs" />
+    <Compile Include="Security\EncryptionService.cs" />
+    <Compile Include="HttpHelper.cs" />
+    <Compile Include="JsonHelper.cs" />
+    <Compile Include="LinqExtension.cs" />
+    <Compile Include="Ping.cs" />
+    <Compile Include="Security\EncodeHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\SecurityHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">

@@ -5,3 +5,4 @@ E:\工作\DataMonitor\DataMonitor\bin\Debug\Cowboy.Sockets.dll
 E:\工作\DataMonitor\DataMonitor\bin\Debug\Logrila.Logging.dll
 E:\工作\DataMonitor\DataMonitor\obj\Debug\DataMonitor.exe
 E:\工作\DataMonitor\DataMonitor\obj\Debug\DataMonitor.pdb
+E:\工作\DataMonitor\DataMonitor\obj\Debug\DataMonitorTest.csprojResolveAssemblyReference.cache
