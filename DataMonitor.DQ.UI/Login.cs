@@ -1,4 +1,5 @@
-﻿using DevComponents.DotNetBar;
+﻿using DataMonitor.DQ.Infrastructure.DataRepository;
+using DevComponents.DotNetBar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,12 @@ namespace DataMonitor.DQ.UI
             InitializeComponent();
             this.EnableGlass = false;
             ReadUserProfile();
+
+            using (var db = new DBMonitorContext())
+            {
+                MessageBox.Show(db.UserInfos.ToList().Count.ToString());
+            }
+
         }
 
         private void buttonX1_Click(object sender, EventArgs e)
