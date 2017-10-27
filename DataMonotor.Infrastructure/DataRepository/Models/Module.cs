@@ -10,12 +10,10 @@ namespace DataMonitor.DQ.Infrastructure.DataRepository.Models
     [Table("Module")]
     public class Module : Entity
     {
-
-        public int ParentId { get; set; }
+        public long ParentId { get; set; }
         public string ModuleName { get; set; }
-
         public string Remark { get; set; }
 
-
+        public virtual ICollection<RoleModule> RoleModules { get; set; }
     }
 }

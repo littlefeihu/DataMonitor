@@ -15,13 +15,16 @@ namespace DataMonitor.DQ.Infrastructure.DataRepository.Models
         public string DeviceNum { get; set; }
 
         public string DataInfo { get; set; }
-        public int DevicePositionId { get; set; }
+        public long DevicePositionId { get; set; }
 
         public string IPAddress { get; set; }
         public string Port { get; set; }
         public string Remark { get; set; }
         public decimal X { get; set; }
         public decimal Y { get; set; }
+
+        [ForeignKey("DevicePositionId")]
+        public virtual Position Position { get; set; }
 
     }
 }

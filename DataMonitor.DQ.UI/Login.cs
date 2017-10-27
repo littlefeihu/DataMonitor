@@ -25,7 +25,17 @@ namespace DataMonitor.DQ.UI
 
             using (var db = new DBMonitorContext())
             {
-                MessageBox.Show(db.UserInfos.ToList().Count.ToString());
+                var user = db.UserInfos.FirstOrDefault();
+                var role = user.Role;
+                var modules = role.RoleModules.Select(o => o.Module).ToList();
+
+
+                var position = db.Positions.FirstOrDefault();
+
+                var devices = position.Devices.ToList();
+
+                MessageBox.Show(user.UserName + role.RoleName + modules.Count + position.PositionName + devices.Count);
+
             }
 
         }

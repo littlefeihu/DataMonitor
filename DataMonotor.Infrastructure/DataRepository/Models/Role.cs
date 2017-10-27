@@ -14,5 +14,10 @@ namespace DataMonitor.DQ.Infrastructure.DataRepository.Models
         public string RoleName { get; set; }
 
         public string Remark { get; set; }
+
+        public virtual ICollection<UserInfo> Users { get; set; }
+
+        public virtual ICollection<RoleModule> RoleModules { get; set; }
+
     }
 }

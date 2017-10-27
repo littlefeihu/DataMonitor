@@ -16,10 +16,10 @@ namespace DataMonitor.DQ.Infrastructure.DataRepository.Models
         public string UpdateBy { get; set; }
 
 
-        public DateTime CreateOn { get; set; }
+        public DateTime? CreateOn { get; set; }
 
 
-        public DateTime UpdateOn { get; set; }
+        public DateTime? UpdateOn { get; set; }
 
     }
 }

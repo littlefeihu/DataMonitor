@@ -11,7 +11,7 @@ namespace DataMonitor.DQ.Infrastructure.DataRepository.Models
     public class Position : Entity
     {
 
-        public int ParentId { get; set; }
+        public long ParentId { get; set; }
 
 
         public string PositionName { get; set; }
@@ -21,6 +21,6 @@ namespace DataMonitor.DQ.Infrastructure.DataRepository.Models
 
         public string DistributionFilePath { get; set; }
 
-        
+        public virtual ICollection<Device> Devices { get; set; }
     }
 }
