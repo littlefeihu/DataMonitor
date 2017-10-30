@@ -11,7 +11,7 @@ namespace DataMonitor.DQ.Infrastructure.DataRepository.Models
     public class Position : Entity
     {
 
-        public long ParentId { get; set; }
+        public int ParentId { get; set; }
 
 
         public string PositionName { get; set; }

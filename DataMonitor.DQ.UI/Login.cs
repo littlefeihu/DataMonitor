@@ -1,4 +1,6 @@
-﻿using DataMonitor.DQ.Infrastructure.DataRepository;
+﻿using DataMonitor.DQ.Infrastructure;
+using DataMonitor.DQ.Infrastructure.DataRepository;
+using DataMonitor.DQ.Infrastructure.Security;
 using DevComponents.DotNetBar;
 using System;
 using System.Collections.Generic;
@@ -22,7 +24,6 @@ namespace DataMonitor.DQ.UI
             InitializeComponent();
             this.EnableGlass = false;
             ReadUserProfile();
-
         }
 
         private void buttonX1_Click(object sender, EventArgs e)
@@ -73,6 +74,9 @@ namespace DataMonitor.DQ.UI
 
         private bool SignIn(string username, string password)
         {
+            SecurityHelper.Md5Encode(password);
+
+
             return true;
         }
 

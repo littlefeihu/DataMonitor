@@ -2,12 +2,13 @@ E:\工作\DataMonitor\DataMonotor.Infrastructure\bin\Debug\DataMonitor.DQ.Infras
 E:\工作\DataMonitor\DataMonotor.Infrastructure\bin\Debug\DataMonitor.DQ.Infrastructure.pdb
 E:\工作\DataMonitor\DataMonotor.Infrastructure\bin\Debug\EntityFramework.dll
 E:\工作\DataMonitor\DataMonotor.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+E:\工作\DataMonitor\DataMonotor.Infrastructure\bin\Debug\Newtonsoft.Json.dll
 E:\工作\DataMonitor\DataMonotor.Infrastructure\bin\Debug\System.Data.SQLite.dll
 E:\工作\DataMonitor\DataMonotor.Infrastructure\bin\Debug\System.Data.SQLite.EF6.dll
 E:\工作\DataMonitor\DataMonotor.Infrastructure\bin\Debug\EntityFramework.xml
 E:\工作\DataMonitor\DataMonotor.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+E:\工作\DataMonitor\DataMonotor.Infrastructure\bin\Debug\Newtonsoft.Json.xml
 E:\工作\DataMonitor\DataMonotor.Infrastructure\bin\Debug\System.Data.SQLite.xml
 E:\工作\DataMonitor\DataMonotor.Infrastructure\obj\Debug\DataMonitor.DQ.Infrastructure.dll
 E:\工作\DataMonitor\DataMonotor.Infrastructure\obj\Debug\DataMonitor.DQ.Infrastructure.pdb
-E:\工作\DataMonitor\DataMonotor.Infrastructure\bin\Debug\Newtonsoft.Json.dll
-E:\工作\DataMonitor\DataMonotor.Infrastructure\bin\Debug\Newtonsoft.Json.xml
+E:\工作\DataMonitor\DataMonotor.Infrastructure\obj\Debug\DataMonitor.DQ.Infrastructure.csprojResolveAssemblyReference.cache

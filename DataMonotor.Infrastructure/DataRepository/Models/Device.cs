@@ -15,7 +15,7 @@ namespace DataMonitor.DQ.Infrastructure.DataRepository.Models
         public string DeviceNum { get; set; }
 
         public string DataInfo { get; set; }
-        public long DevicePositionId { get; set; }
+        public int DevicePositionId { get; set; }
 
         public string IPAddress { get; set; }
         public string Port { get; set; }

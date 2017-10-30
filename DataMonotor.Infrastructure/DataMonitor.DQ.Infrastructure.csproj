@@ -66,6 +66,7 @@
     <Compile Include="AppException.cs" />
     <Compile Include="AssemblyHelper.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="DataAccess.cs" />
     <Compile Include="DataRepository\DBMonitorContext.cs" />
     <Compile Include="DataRepository\Models\Device.cs" />
     <Compile Include="DataRepository\Models\Entity.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="DataRepository\Models\RoleModule.cs" />
     <Compile Include="DataRepository\Models\UserInfo.cs" />
     <Compile Include="DataValidateHelper.cs" />
+    <Compile Include="ManifestResourceHelper.cs" />
     <Compile Include="Security\EncryptionService.cs" />
     <Compile Include="HttpHelper.cs" />
     <Compile Include="JsonHelper.cs" />
