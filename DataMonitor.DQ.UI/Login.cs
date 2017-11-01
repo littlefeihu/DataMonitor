@@ -1,4 +1,5 @@
-﻿using DataMonitor.DQ.Infrastructure;
+﻿using DataMonitor.DQ.BusinessLayer;
+using DataMonitor.DQ.Infrastructure;
 using DataMonitor.DQ.Infrastructure.DataRepository;
 using DataMonitor.DQ.Infrastructure.Security;
 using DevComponents.DotNetBar;
@@ -28,17 +29,20 @@ namespace DataMonitor.DQ.UI
 
         private void buttonX1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
             string username = txtUserName.Text;
             string password = txtPwd.Text;
 
             if (SignIn(username, password))
             {
+                this.Hide();
                 SaveUserProfile(username, password);
                 MainForm mainForm = new MainForm();
                 mainForm.WindowState = FormWindowState.Maximized;
                 mainForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("登录失败，请重试");
             }
         }
 
@@ -74,10 +78,11 @@ namespace DataMonitor.DQ.UI
 
         private bool SignIn(string username, string password)
         {
-            SecurityHelper.Md5Encode(password);
-
-
-            return true;
+            var encryptedpwd = SecurityHelper.Md5Encode(password);
+            var user = AuthenticationService.SignIn(username, encryptedpwd);
+            Singleton.Instance.CurrentUser = user;
+            Singleton.Instance.Modules = user.Role.RoleModules.Select(o => o.Module).ToList();
+            return user != null;
         }
 
         private void buttonX2_Click(object sender, EventArgs e)

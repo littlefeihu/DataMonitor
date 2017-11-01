@@ -8,7 +8,7 @@ namespace DataMonitor.DQ.Infrastructure.DataRepository.Models
 {
     public class Entity
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
 
         public string CreateBy { get; set; }
 

@@ -10,9 +10,9 @@ namespace DataMonitor.DQ.Infrastructure.DataRepository.Models
     [Table("RoleModule")]
     public class RoleModule : Entity
     {
-        public int RoleId { get; set; }
+        public long RoleId { get; set; }
 
-        public int ModuleId { get; set; }
+        public long ModuleId { get; set; }
 
         [ForeignKey("RoleId")]
         public virtual Role Role { get; set; }

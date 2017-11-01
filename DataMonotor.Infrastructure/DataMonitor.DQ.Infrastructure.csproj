@@ -67,10 +67,12 @@
     <Compile Include="AssemblyHelper.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="DataAccess.cs" />
+    <Compile Include="DataRepository\DataDBMonitorContext.cs" />
     <Compile Include="DataRepository\DBMonitorContext.cs" />
     <Compile Include="DataRepository\Models\Device.cs" />
     <Compile Include="DataRepository\Models\Entity.cs" />
     <Compile Include="DataRepository\Models\Module.cs" />
+    <Compile Include="DataRepository\Models\MonitoringRecord.cs" />
     <Compile Include="DataRepository\Models\Position.cs" />
     <Compile Include="DataRepository\Models\Role.cs" />
     <Compile Include="DataRepository\Models\RoleModule.cs" />

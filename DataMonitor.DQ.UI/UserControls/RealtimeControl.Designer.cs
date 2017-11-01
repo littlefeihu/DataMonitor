@@ -46,10 +46,6 @@
             this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.deviceItem3 = new DataMonitor.DQ.UI.UserControls.DeviceItem();
-            this.deviceItem4 = new DataMonitor.DQ.UI.UserControls.DeviceItem();
-            this.deviceItem1 = new DataMonitor.DQ.UI.UserControls.DeviceItem();
-            this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -181,9 +177,6 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.flowLayoutPanel1.Controls.Add(this.deviceItem3);
-            this.flowLayoutPanel1.Controls.Add(this.deviceItem4);
-            this.flowLayoutPanel1.Controls.Add(this.deviceItem1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(154, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -262,27 +255,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1011, 507);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
-            // deviceItem3
-            // 
-            this.deviceItem3.Location = new System.Drawing.Point(3, 3);
-            this.deviceItem3.Name = "deviceItem3";
-            this.deviceItem3.Size = new System.Drawing.Size(288, 159);
-            this.deviceItem3.TabIndex = 2;
-            // 
-            // deviceItem4
-            // 
-            this.deviceItem4.Location = new System.Drawing.Point(297, 3);
-            this.deviceItem4.Name = "deviceItem4";
-            this.deviceItem4.Size = new System.Drawing.Size(288, 159);
-            this.deviceItem4.TabIndex = 3;
-            // 
-            // deviceItem1
-            // 
-            this.deviceItem1.Location = new System.Drawing.Point(3, 168);
-            this.deviceItem1.Name = "deviceItem1";
-            this.deviceItem1.Size = new System.Drawing.Size(288, 159);
-            this.deviceItem1.TabIndex = 0;
-            // 
             // RealtimeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -290,7 +262,6 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "RealtimeControl";
             this.Size = new System.Drawing.Size(1011, 507);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -310,9 +281,6 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem5;
         private DevComponents.DotNetBar.ButtonItem buttonItem6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private DeviceItem deviceItem1;
-        private DeviceItem deviceItem3;
-        private DeviceItem deviceItem4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private DevComponents.DotNetBar.ButtonX buttonX5;
         private DevComponents.DotNetBar.ButtonX buttonX4;

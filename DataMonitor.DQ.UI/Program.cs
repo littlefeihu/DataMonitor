@@ -20,7 +20,6 @@ namespace DataMonitor.DQ.UI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
-
         }
 
         private static void InitDatabase()

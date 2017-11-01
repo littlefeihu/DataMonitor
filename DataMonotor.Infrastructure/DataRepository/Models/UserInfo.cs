@@ -14,7 +14,7 @@ namespace DataMonitor.DQ.Infrastructure.DataRepository.Models
 
         public string Password { get; set; }
 
-        public int RoleId { get; set; }
+        public long RoleId { get; set; }
 
         [ForeignKey("RoleId")]
         public virtual Role Role { get; set; }

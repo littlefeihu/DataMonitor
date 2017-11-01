@@ -75,6 +75,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Singleton.cs" />
     <Compile Include="UserControls\DeviceItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -128,6 +129,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataMonitor.DQ.BusinessLayer\DataMonitor.DQ.BusinessLayer.csproj">
+      <Project>{e289e122-fb08-40b8-82ed-8d239ac9d09d}</Project>
+      <Name>DataMonitor.DQ.BusinessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataMonotor.Infrastructure\DataMonitor.DQ.Infrastructure.csproj">
       <Project>{da96aecb-d00e-4f46-b826-b0f0e9c46c3d}</Project>
       <Name>DataMonitor.DQ.Infrastructure</Name>
