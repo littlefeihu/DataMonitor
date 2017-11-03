@@ -22,7 +22,10 @@ namespace DataMonitor.DQ.UI.UserControls
 
         private void LoadAllDevice()
         {
-            foreach (var device in DeviceService.GetAllDevices())
+
+            var alldevices = DeviceService.GetAllDevices();
+
+            foreach (var device in alldevices)
             {
                 var deviceItem = new DeviceItem(device);
                 flowLayoutPanel1.Controls.Add(deviceItem);
