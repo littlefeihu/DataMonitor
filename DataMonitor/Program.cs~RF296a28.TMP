@@ -70,7 +70,7 @@ namespace DataMonitor
                             //开启温湿度报警25030AAA010366
                             //关闭温湿度报警25030AAA010066
 
-                            text = "250401FF0066";
+                            text = "250406AA0201000066";
                         }
                         var cmdbytes = new GetDataCommand(text).GetCommandBytes();
 
@@ -131,7 +131,7 @@ namespace DataMonitor
             //new GetCollectionInternalAction().Excute(msgItem.BodyBytes);
             // new ReadTemperatureAlarmNumAction().Excute(msgItem.BodyBytes);
             //new ReadHumidityMsgAction().Excute(msgItem.BodyBytes);
-            new GetTemperatureAndHumidityAction().Excute(msgItem.BodyBytes);
+            //new GetTemperatureAndHumidityAction().Excute(msgItem.BodyBytes);
             //new ReadSaveIntervalAction().Excute(msgItem.BodyBytes);
             //new GetDeviceDatetimeAction().Excute(msgItem.BodyBytes);
 
