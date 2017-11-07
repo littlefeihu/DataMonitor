@@ -1,4 +1,5 @@
-﻿using DevComponents.DotNetBar;
+﻿using DataMonitor.DQ.UI.UserControls;
+using DevComponents.DotNetBar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,6 +22,8 @@ namespace DataMonitor.DQ.UI
             this.Text = System.Configuration.ConfigurationManager.AppSettings["name"];
             ribbonControl1.Items[0].ShowSubItems = true;
             InitModules();
+
+            
         }
 
         private void InitModules()

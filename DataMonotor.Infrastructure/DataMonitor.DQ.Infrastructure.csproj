@@ -13,6 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -101,6 +102,7 @@
     <Compile Include="DataRepository\Models\UserInfo.cs" />
     <Compile Include="DataValidateHelper.cs" />
     <Compile Include="ManifestResourceHelper.cs" />
+    <Compile Include="MsgItem.cs" />
     <Compile Include="Security\EncryptionService.cs" />
     <Compile Include="HttpHelper.cs" />
     <Compile Include="JsonHelper.cs" />

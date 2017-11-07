@@ -1,6 +1,6 @@
 ﻿namespace DataMonitor.DQ.UI.UserControls
 {
-    partial class DeviceItem
+    partial class DeviceItemControl
     {
         /// <summary> 
         /// 必需的设计器变量。
@@ -132,12 +132,12 @@
             this.line1.TabIndex = 6;
             this.line1.Text = "line1";
             // 
-            // DeviceItem
+            // DeviceItemControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Name = "DeviceItem";
+            this.Name = "DeviceItemControl";
             this.Size = new System.Drawing.Size(288, 159);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

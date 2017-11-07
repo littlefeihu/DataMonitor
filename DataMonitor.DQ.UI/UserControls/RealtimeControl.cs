@@ -16,18 +16,15 @@ namespace DataMonitor.DQ.UI.UserControls
         public RealtimeControl()
         {
             InitializeComponent();
-
+            AppStartUp.Start();
             LoadAllDevice();
         }
 
         private void LoadAllDevice()
         {
-
-            var alldevices = DeviceService.GetAllDevices();
-
-            foreach (var device in alldevices)
+            foreach (var device in AppStartUp.DeviceItems)
             {
-                var deviceItem = new DeviceItem(device);
+                var deviceItem = new DeviceItemControl(device);
                 flowLayoutPanel1.Controls.Add(deviceItem);
             }
         }

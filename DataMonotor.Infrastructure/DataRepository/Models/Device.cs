@@ -24,5 +24,8 @@ namespace DataMonitor.DQ.Infrastructure.DataRepository.Models
         [ForeignKey("DevicePositionId")]
         public virtual Position Position { get; set; }
 
+        [NotMapped]
+        public string GetwayAddress { get { return IPAddress + "|" + Port; } }
+
     }
 }
