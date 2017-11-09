@@ -70,7 +70,8 @@ namespace DataMonitor
                             //开启温湿度报警25030AAA010366
                             //关闭温湿度报警25030AAA010066
 
-                            text = "250401FF0066";
+                            // text = "250F06AA0066";
+                            text = "250F06AA0202000066";
                         }
                         var cmdbytes = new GetDataCommand(text).GetCommandBytes();
 
@@ -117,21 +118,21 @@ namespace DataMonitor
             var msgItem = new MsgItem(e.Data, e.DataOffset, e.DataLength);
             Console.WriteLine(msgItem.GetHexString());
 
-            //if (msgItem.CommandHex == "06AA")
-            //{
-            //    if (msgItem.BodyLengthHex == "06")
-            //    {
-            //        new GetPackageCountAction().Excute(msgItem.BodyBytes);
-            //    }
-            //    else
-            //    {
-            //        new DownloadHistoryDataAction().Excute(msgItem.BodyBytes);
-            //    }
-            //}
+            if (msgItem.CommandHex == "06AA")
+            {
+                if (msgItem.BodyLengthHex == "06")
+                {
+                    new GetPackageCountAction().Excute(msgItem.BodyBytes);
+                }
+                else
+                {
+                    new DownloadHistoryDataAction().Excute(msgItem.BodyBytes);
+                }
+            }
             //new GetCollectionInternalAction().Excute(msgItem.BodyBytes);
             // new ReadTemperatureAlarmNumAction().Excute(msgItem.BodyBytes);
             //new ReadHumidityMsgAction().Excute(msgItem.BodyBytes);
-            new GetTemperatureAndHumidityAction().Excute(msgItem.BodyBytes);
+            //new GetTemperatureAndHumidityAction().Excute(msgItem.BodyBytes);
             //new ReadSaveIntervalAction().Excute(msgItem.BodyBytes);
             //new GetDeviceDatetimeAction().Excute(msgItem.BodyBytes);
 

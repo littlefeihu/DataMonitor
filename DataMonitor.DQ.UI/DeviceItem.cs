@@ -22,6 +22,9 @@ namespace DataMonitor.DQ.UI
         public MyTcpSocketClient Client { get; private set; }
 
 
-
+        public void SetClient(MyTcpSocketClient client)
+        {
+            Client = client;
+        }
     }
 }

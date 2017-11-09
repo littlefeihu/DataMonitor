@@ -28,86 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.labelX5 = new DevComponents.DotNetBar.LabelX();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.line1 = new DevComponents.DotNetBar.Controls.Line();
-            this.panel1.SuspendLayout();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.labelX1);
+            this.flowLayoutPanel1.Controls.Add(this.labelX2);
+            this.flowLayoutPanel1.Controls.Add(this.labelX3);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(68, 63);
+            this.flowLayoutPanel1.TabIndex = 10;
             // 
             // labelX1
             // 
-            this.labelX1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             // 
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelX1.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX1.ForeColor = System.Drawing.Color.White;
-            this.labelX1.Location = new System.Drawing.Point(0, 0);
+            this.labelX1.Location = new System.Drawing.Point(3, 3);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(286, 37);
+            this.labelX1.Size = new System.Drawing.Size(62, 13);
             this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "设备0000000274";
+            this.labelX1.Text = "labelX1";
             this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.labelX5);
-            this.panel1.Controls.Add(this.labelX1);
-            this.panel1.Controls.Add(this.labelX4);
-            this.panel1.Controls.Add(this.labelX3);
-            this.panel1.Controls.Add(this.labelX2);
-            this.panel1.Controls.Add(this.line1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(288, 159);
-            this.panel1.TabIndex = 6;
-            // 
-            // labelX5
-            // 
-            // 
-            // 
-            // 
-            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX5.Location = new System.Drawing.Point(36, 92);
-            this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(100, 38);
-            this.labelX5.TabIndex = 10;
-            this.labelX5.Text = "经度:45.32";
-            // 
-            // labelX4
-            // 
-            // 
-            // 
-            // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX4.Location = new System.Drawing.Point(155, 92);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(101, 38);
-            this.labelX4.TabIndex = 9;
-            this.labelX4.Text = "纬度：168.23";
-            // 
-            // labelX3
-            // 
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX3.Location = new System.Drawing.Point(155, 49);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(101, 37);
-            this.labelX3.TabIndex = 8;
-            this.labelX3.Text = "湿度:5.9";
             // 
             // labelX2
             // 
@@ -115,43 +65,46 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX2.Location = new System.Drawing.Point(36, 49);
+            this.labelX2.Location = new System.Drawing.Point(3, 22);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(100, 37);
-            this.labelX2.TabIndex = 7;
-            this.labelX2.Text = "温度:6.7";
+            this.labelX2.Size = new System.Drawing.Size(62, 13);
+            this.labelX2.TabIndex = 1;
+            this.labelX2.Text = "labelX2";
+            this.labelX2.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
-            // line1
+            // labelX3
             // 
-            this.line1.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.line1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.line1.Location = new System.Drawing.Point(36, 78);
-            this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(213, 23);
-            this.line1.TabIndex = 6;
-            this.line1.Text = "line1";
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Location = new System.Drawing.Point(3, 41);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(62, 19);
+            this.labelX3.TabIndex = 2;
+            this.labelX3.Text = "labelX3";
+            this.labelX3.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // DeviceItemControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.ForeColor = System.Drawing.Color.Gray;
             this.Name = "DeviceItemControl";
-            this.Size = new System.Drawing.Size(288, 159);
-            this.panel1.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(68, 63);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private System.Windows.Forms.Panel panel1;
-        private DevComponents.DotNetBar.LabelX labelX5;
-        private DevComponents.DotNetBar.LabelX labelX4;
-        private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.Controls.Line line1;
+        private DevComponents.DotNetBar.LabelX labelX3;
+
     }
 }

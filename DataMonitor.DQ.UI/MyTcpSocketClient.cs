@@ -29,6 +29,17 @@ namespace DataMonitor.DQ.UI
             actions.Add(new GetTemperatureAndHumidityAction());
             actions.Add(new DownloadHistoryDataAction());
         }
+
+
+        public void Send(string cmdText)
+        {
+            var cmdbytes = new GetDataCommand(cmdText).GetCommandBytes();
+            if (Client != null)
+            {
+                Client.Send(cmdbytes);
+            }
+        }
+
         /// <summary>
         /// 连接到服务器
         /// </summary>
@@ -76,6 +87,18 @@ namespace DataMonitor.DQ.UI
         void client_ServerDataReceived(object sender, TcpServerDataReceivedEventArgs e)
         {
             var msgItem = new MsgItem(e.Data, e.DataOffset, e.DataLength);
+
+            if (msgItem.CommandHex == "06AA")
+            {//历史数据处理
+                if (msgItem.BodyLengthHex == "06")
+                {//包数解析
+                    new GetPackageCountAction().Excute(msgItem.BodyBytes);
+                }
+                else
+                {//包内容解析
+                    new DownloadHistoryDataAction().Excute(msgItem.BodyBytes);
+                }
+            }
 
             if (ServerDataReceived != null)
             {

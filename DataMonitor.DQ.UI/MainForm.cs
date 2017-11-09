@@ -1,4 +1,5 @@
-﻿using DataMonitor.DQ.UI.UserControls;
+﻿using DataMonitor.DQ.Infrastructure;
+using DataMonitor.DQ.UI.UserControls;
 using DevComponents.DotNetBar;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,8 @@ namespace DataMonitor.DQ.UI
 {
     public partial class MainForm : Office2007RibbonForm
     {
+
+        RealtimeControl control;
         public MainForm()
         {
             InitializeComponent();
@@ -22,8 +25,18 @@ namespace DataMonitor.DQ.UI
             this.Text = System.Configuration.ConfigurationManager.AppSettings["name"];
             ribbonControl1.Items[0].ShowSubItems = true;
             InitModules();
+            control = new RealtimeControl();
+            control.Height = 1004;
+            control.Dock = DockStyle.Fill;
+            control.MouseMoveEvent += control_MouseMove;
+            panel1.Controls.Add(control);
+            panel1.Height = 1005;
 
-            
+        }
+
+        void control_MouseMove(MouseEventArgs obj)
+        {
+            labelItem1.Text = string.Format("X:{0},Y:{1}", obj.X, obj.Y);
         }
 
         private void InitModules()
@@ -73,12 +86,27 @@ namespace DataMonitor.DQ.UI
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+
+            AppStartUp.ShutDown();
             Application.Exit();
         }
 
         private void switchButtonItem1_ValueChanged(object sender, EventArgs e)
         {
             ribbonControl1.Expanded = !ribbonControl1.Expanded;
+        }
+        /// <summary>
+        /// 增加测点
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonItem6_Click(object sender, EventArgs e)
+        {
+            ButtonItem item = sender as ButtonItem;
+
+            Singleton.Instance.EditDeviceMode = (EditDeviceMode)Enum.Parse(typeof(EditDeviceMode), item.Tag.ToString());
+
+
         }
     }
 }

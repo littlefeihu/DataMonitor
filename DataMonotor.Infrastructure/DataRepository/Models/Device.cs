@@ -17,8 +17,8 @@ namespace DataMonitor.DQ.Infrastructure.DataRepository.Models
         public string IPAddress { get; set; }
         public string Port { get; set; }
         public string Remark { get; set; }
-        public decimal X { get; set; }
-        public decimal Y { get; set; }
+        public int X { get; set; }
+        public int Y { get; set; }
         public bool Connected { get; set; }
 
         [ForeignKey("DevicePositionId")]

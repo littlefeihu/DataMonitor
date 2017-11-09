@@ -1,4 +1,5 @@
-﻿using DataMonitor.DQ.Infrastructure.DataRepository.Models;
+﻿using DataMonitor.DQ.Infrastructure;
+using DataMonitor.DQ.Infrastructure.DataRepository.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace DataMonitor.DQ.UI
 
         public UserInfo CurrentUser { get; set; }
 
+        public EditDeviceMode EditDeviceMode { get; set; }
 
         public List<Module> Modules { get; set; }
     }

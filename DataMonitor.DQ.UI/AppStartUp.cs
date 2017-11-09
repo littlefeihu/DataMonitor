@@ -17,6 +17,8 @@ namespace DataMonitor.DQ.UI
 
         public static List<MyTcpSocketClient> Clients = new List<MyTcpSocketClient>();
 
+        public static event Action<List<MyTcpSocketClient>> StartCompleted;
+
         public static void Start()
         {
             var alldevices = DeviceService.GetAllDevices();
@@ -27,7 +29,20 @@ namespace DataMonitor.DQ.UI
             {
                 var client = new MyTcpSocketClient(getwayItem.IPAddress, getwayItem.Port);
 
-                client.ConnectToServer();
+                bool success = false;
+                do
+                {
+                    try
+                    {
+                        client.ConnectToServer();
+                        success = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.ToString());
+                    }
+
+                } while (success == false);
 
                 Clients.Add(client);
 
@@ -35,6 +50,10 @@ namespace DataMonitor.DQ.UI
                 {
                     DeviceItems.Add(new DeviceItem(device, client));
                 }
+            }
+            if (StartCompleted != null)
+            {
+                StartCompleted(Clients);
             }
         }
 
