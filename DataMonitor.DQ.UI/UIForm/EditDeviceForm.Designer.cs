@@ -65,8 +65,8 @@
             this.labelX16 = new DevComponents.DotNetBar.LabelX();
             this.textBoxX15 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX17 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX16 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX17 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.checkBoxX1 = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.checkBoxX2 = new DevComponents.DotNetBar.Controls.CheckBoxX();
             ((System.ComponentModel.ISupportInitialize)(this.ipAddressInput1)).BeginInit();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
@@ -254,10 +254,9 @@
             this.groupPanel1.BackColor = System.Drawing.Color.Transparent;
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.groupPanel1.Controls.Add(this.textBoxX16);
+            this.groupPanel1.Controls.Add(this.checkBoxX2);
             this.groupPanel1.Controls.Add(this.textBoxX11);
             this.groupPanel1.Controls.Add(this.labelX14);
-            this.groupPanel1.Controls.Add(this.textBoxX17);
             this.groupPanel1.Controls.Add(this.textBoxX10);
             this.groupPanel1.Controls.Add(this.labelX13);
             this.groupPanel1.Controls.Add(this.textBoxX9);
@@ -267,7 +266,7 @@
             this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel1.Location = new System.Drawing.Point(48, 219);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(228, 207);
+            this.groupPanel1.Size = new System.Drawing.Size(228, 224);
             // 
             // 
             // 
@@ -465,6 +464,7 @@
             this.groupPanel2.BackColor = System.Drawing.Color.Transparent;
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.groupPanel2.Controls.Add(this.checkBoxX1);
             this.groupPanel2.Controls.Add(this.textBoxX12);
             this.groupPanel2.Controls.Add(this.labelX3);
             this.groupPanel2.Controls.Add(this.textBoxX13);
@@ -476,7 +476,7 @@
             this.groupPanel2.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel2.Location = new System.Drawing.Point(290, 219);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(228, 207);
+            this.groupPanel2.Size = new System.Drawing.Size(228, 224);
             // 
             // 
             // 
@@ -608,31 +608,31 @@
             this.labelX17.TabIndex = 3;
             this.labelX17.Text = "报警上限";
             // 
-            // textBoxX16
+            // checkBoxX1
             // 
             // 
             // 
             // 
-            this.textBoxX16.Border.Class = "TextBoxBorder";
-            this.textBoxX16.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX16.Location = new System.Drawing.Point(83, 54);
-            this.textBoxX16.Name = "textBoxX16";
-            this.textBoxX16.PreventEnterBeep = true;
-            this.textBoxX16.Size = new System.Drawing.Size(100, 21);
-            this.textBoxX16.TabIndex = 20;
+            this.checkBoxX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBoxX1.Location = new System.Drawing.Point(70, 170);
+            this.checkBoxX1.Name = "checkBoxX1";
+            this.checkBoxX1.Size = new System.Drawing.Size(100, 23);
+            this.checkBoxX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBoxX1.TabIndex = 21;
+            this.checkBoxX1.Text = "启用";
             // 
-            // textBoxX17
-            // 
-            // 
+            // checkBoxX2
             // 
             // 
-            this.textBoxX17.Border.Class = "TextBoxBorder";
-            this.textBoxX17.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX17.Location = new System.Drawing.Point(83, 133);
-            this.textBoxX17.Name = "textBoxX17";
-            this.textBoxX17.PreventEnterBeep = true;
-            this.textBoxX17.Size = new System.Drawing.Size(100, 21);
-            this.textBoxX17.TabIndex = 18;
+            // 
+            // 
+            this.checkBoxX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBoxX2.Location = new System.Drawing.Point(83, 170);
+            this.checkBoxX2.Name = "checkBoxX2";
+            this.checkBoxX2.Size = new System.Drawing.Size(100, 23);
+            this.checkBoxX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBoxX2.TabIndex = 22;
+            this.checkBoxX2.Text = "启用";
             // 
             // EditDeviceForm
             // 
@@ -709,7 +709,7 @@
         private DevComponents.DotNetBar.LabelX labelX16;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX15;
         private DevComponents.DotNetBar.LabelX labelX17;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX16;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX17;
+        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX1;
+        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX2;
     }
 }
