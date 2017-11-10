@@ -24,7 +24,7 @@ namespace DataMonitor.DQ.Infrastructure.DataRepository
         public DbSet<Role> Roles { set; get; }
         public DbSet<RoleModule> RoleModules { set; get; }
         public DbSet<UserInfo> UserInfos { set; get; }
-
+        public DbSet<Warehouse> Warehouses { set; get; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
 

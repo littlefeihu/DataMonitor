@@ -83,6 +83,7 @@
     <Compile Include="Action\SetTemperatureHumidityAlarmStatusAction.cs" />
     <Compile Include="AppException.cs" />
     <Compile Include="AssemblyHelper.cs" />
+    <Compile Include="DataRepository\Models\Warehouse.cs" />
     <Compile Include="EditDeviceMode.cs" />
     <Compile Include="IBaseAction.cs" />
     <Compile Include="Command\Command.cs" />

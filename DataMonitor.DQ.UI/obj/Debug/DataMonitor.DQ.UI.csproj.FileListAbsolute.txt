@@ -31,3 +31,6 @@ E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\main.jpg
 E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\MyAdd.ico
 E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\MyDelete.ico
 E:\工作\DataMonitor\DataMonitor.DQ.UI\bin\Debug\MyXG.ico
+E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.UIForm.EditDeviceForm.resources
+E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.UIForm.MainWarehouseForm.resources
+E:\工作\DataMonitor\DataMonitor.DQ.UI\obj\Debug\DataMonitor.DQ.UI.UIForm.WarehouseEditForm.resources

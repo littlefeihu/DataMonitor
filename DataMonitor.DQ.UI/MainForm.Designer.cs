@@ -237,6 +237,7 @@
             // 
             this.buttonItem21.Name = "buttonItem21";
             this.buttonItem21.Text = "库房属性";
+            this.buttonItem21.Click += new System.EventHandler(this.buttonItem21_Click);
             // 
             // ribbonBar10
             // 

@@ -1,4 +1,5 @@
 ﻿using DataMonitor.DQ.Infrastructure;
+using DataMonitor.DQ.UI.UIForm;
 using DataMonitor.DQ.UI.UserControls;
 using DevComponents.DotNetBar;
 using System;
@@ -107,6 +108,17 @@ namespace DataMonitor.DQ.UI
             Singleton.Instance.EditDeviceMode = (EditDeviceMode)Enum.Parse(typeof(EditDeviceMode), item.Tag.ToString());
 
 
+        }
+        /// <summary>
+        /// 库房属性列表
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonItem21_Click(object sender, EventArgs e)
+        {
+            MainWarehouseForm form = new MainWarehouseForm();
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog();
         }
     }
 }
