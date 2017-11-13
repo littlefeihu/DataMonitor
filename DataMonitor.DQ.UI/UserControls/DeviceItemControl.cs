@@ -10,12 +10,16 @@ using System.Windows.Forms;
 using DataMonitor.DQ.Infrastructure.DataRepository.Models;
 using System.Threading;
 using DataMonitor.DQ.UI.Helper;
+using DataMonitor.DQ.UI.UIForm;
+using DataMonitor.DQ.BusinessLayer;
 
 namespace DataMonitor.DQ.UI.UserControls
 {
     public partial class DeviceItemControl : UserControl
     {
         DeviceItem _deviceitem;
+        public event Action<DeviceItemControl> EditComplete;
+        public event Action<DeviceItemControl> RemodeComplete;
         public DeviceItemControl(DeviceItem deviceitem)
         {
             InitializeComponent();
@@ -69,23 +73,35 @@ namespace DataMonitor.DQ.UI.UserControls
         {
             switch (Singleton.Instance.EditDeviceMode)
             {
-                case DataMonitor.DQ.Infrastructure.EditDeviceMode.None:
-
-                    break;
-                case DataMonitor.DQ.Infrastructure.EditDeviceMode.Add:
-
-                    break;
                 case DataMonitor.DQ.Infrastructure.EditDeviceMode.Update:
-                    MessageBox.Show("Update");
+
+                    var editDeviceForm = new EditDeviceForm(_deviceitem.Device);
+                    editDeviceForm.EditComplete += editDeviceForm_EditComplete;
+                    editDeviceForm.ShowDialog();
+
                     break;
                 case DataMonitor.DQ.Infrastructure.EditDeviceMode.Delete:
                     if (MessageBox.Show("确定要删除删除当前监测点吗？", "删除确认", MessageBoxButtons.OKCancel) == DialogResult.OK)
                     {
-                        this.Hide();
+                        DeviceService.DeleteDevice(this._deviceitem.Device.Id);
+                        if (RemodeComplete != null)
+                        {
+                            RemodeComplete(this);
+                        }
                     }
                     break;
                 default:
                     break;
+            }
+        }
+
+        void editDeviceForm_EditComplete(Device device)
+        {
+            labelX1.Text = device.DeviceName;
+            if (EditComplete != null)
+            {
+                this.DeviceItem.SetDevice(device);
+                EditComplete(this);
             }
         }
 

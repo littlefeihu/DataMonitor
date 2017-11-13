@@ -26,5 +26,11 @@ namespace DataMonitor.DQ.UI
         {
             Client = client;
         }
+
+        public void SetDevice(Device device)
+        {
+            Device = device;
+        }
+
     }
 }

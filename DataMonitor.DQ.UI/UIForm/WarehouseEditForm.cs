@@ -16,20 +16,20 @@ namespace DataMonitor.DQ.UI.UIForm
     public partial class WarehouseEditForm : Office2007Form
     {
 
-        Warehouse _warehouse = new Warehouse();
+        Warehouse _warehouse = null;
 
         public WarehouseEditForm()
+            : this(new Warehouse())
         {
             InitializeComponent();
-            this.EnableGlass = false;
-            bindingSource1.DataSource = _warehouse;
+
         }
         public WarehouseEditForm(Warehouse warehouse)
         {
             InitializeComponent();
             this.EnableGlass = false;
             _warehouse = warehouse;
-            bindingSource1.DataSource = _warehouse;
+            bindingSource1.DataSource = warehouse;
         }
         private void buttonX1_Click(object sender, EventArgs e)
         {

@@ -33,7 +33,7 @@ namespace DataMonitor.DQ.UI.UIForm
         {
             if (MessageBox.Show("确认删除吗？", "删除提示", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                var warehouse = (Warehouse)this.dataGridViewX1.CurrentRow.DataBoundItem;
+                var warehouse = this.dataGridViewX1.CurrentRow.DataBoundItem as Warehouse;
 
                 WarehouseService.DeleteWarehouse(warehouse.Id);
                 LoadData();
@@ -44,8 +44,8 @@ namespace DataMonitor.DQ.UI.UIForm
 
         private void tsbtnEdit_Click(object sender, EventArgs e)
         {
-            var warehouse = (Warehouse)this.dataGridViewX1.CurrentRow.DataBoundItem;
-            if (warehouse == null)
+            var warehouse = this.dataGridViewX1.CurrentRow.DataBoundItem as Warehouse;
+            if (warehouse != null)
             {
                 WarehouseEditForm form = new WarehouseEditForm(warehouse);
                 form.ShowDialog();

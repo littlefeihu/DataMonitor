@@ -11,6 +11,7 @@ using DataMonitor.DQ.BusinessLayer;
 using System.Threading;
 using DataMonitor.DQ.Infrastructure;
 using DataMonitor.DQ.UI.Helper;
+using DataMonitor.DQ.UI.UIForm;
 namespace DataMonitor.DQ.UI.UserControls
 {
     public partial class RealtimeControl : UserControl
@@ -44,7 +45,7 @@ namespace DataMonitor.DQ.UI.UserControls
 
             tableLayoutPanel1.AutoScroll = true;
             this.panel1.MouseMove += panel1_MouseMove;
-              this.panel1.MouseClick+=panel1_MouseClick;
+            this.panel1.MouseClick += panel1_MouseClick;
         }
 
         void AppStartUp_StartCompleted(List<MyTcpSocketClient> clients)
@@ -67,11 +68,17 @@ namespace DataMonitor.DQ.UI.UserControls
             {
                 var deviceItem = new DeviceItem(device, null);
                 var deviceItemControl = new DeviceItemControl(deviceItem);
+                deviceItemControl.EditComplete += deviceItemControl_EditComplete;
+                deviceItemControl.RemodeComplete += deviceItemControl_RemodeComplete;
                 deviceItemControl.Top = device.Y;
                 deviceItemControl.Left = device.X;
                 panel1.Controls.Add(deviceItemControl);
             }
         }
+
+
+
+
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -93,9 +100,50 @@ namespace DataMonitor.DQ.UI.UserControls
 
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
+            switch (Singleton.Instance.EditDeviceMode)
+            {
+                case DataMonitor.DQ.Infrastructure.EditDeviceMode.Add:
+                    var addDeviceForm = new EditDeviceForm(e.X, e.Y);
+                    addDeviceForm.EditComplete += addDeviceForm_EditComplete;
+                    addDeviceForm.ShowDialog();
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+        void addDeviceForm_EditComplete(Infrastructure.DataRepository.Models.Device device)
+        {
+
+            var deviceItem = new DeviceItem(device, null);
+            var deviceItemControl = new DeviceItemControl(deviceItem);
+            deviceItemControl.Top = device.Y;
+            deviceItemControl.Left = device.X;
+
+            var targetClient = AppStartUp.Clients.FirstOrDefault(o => o.Ip == device.IPAddress && o.Port == device.Port);
+            if (targetClient != null)
+            {
+                deviceItemControl.SetClient(targetClient);
+            }
+            panel1.Controls.Add(deviceItemControl);
+
             Singleton.Instance.EditDeviceMode = EditDeviceMode.None;
         }
 
+        void deviceItemControl_RemodeComplete(DeviceItemControl control)
+        {
+            panel1.Controls.Remove(control);
+        }
+
+
+        void deviceItemControl_EditComplete(DeviceItemControl deviceItemControl)
+        {
+            deviceItemControl.Top = deviceItemControl.DeviceItem.Device.Y;
+            deviceItemControl.Left = deviceItemControl.DeviceItem.Device.X;
+
+            Singleton.Instance.EditDeviceMode = EditDeviceMode.None;
+        }
 
 
     }

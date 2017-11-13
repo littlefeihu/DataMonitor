@@ -12,7 +12,9 @@ namespace DataMonitor.DQ.BusinessLayer
     {
         public static List<Warehouse> GetAllWarehouses()
         {
-            return DataAccess.Db.Warehouses.ToList();
+            var warehouses = DataAccess.Db.Warehouses.ToList();
+            warehouses.Insert(0, new Warehouse { Id = 0, Name = "请选择" });
+            return warehouses;
         }
         public static void AddWarehouse(Warehouse warehouse)
         {
