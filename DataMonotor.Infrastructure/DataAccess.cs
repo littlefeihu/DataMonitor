@@ -17,5 +17,15 @@ namespace DataMonitor.DQ.Infrastructure
             }
         }
 
+        public static DataDBMonitorContext Db_DataRecord
+        {
+            get
+            {
+                return new DataDBMonitorContext();
+            }
+        }
+
+
+
     }
 }

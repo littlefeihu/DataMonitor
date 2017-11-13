@@ -12,6 +12,8 @@ namespace DataMonitor.DQ.Infrastructure.DataRepository.Models
     {
         public long Id { get; set; }
 
+        public long DeviceId { get; set; }
+
         public decimal Temperature { get; set; }
         public decimal Humidity { get; set; }
 
@@ -23,6 +25,9 @@ namespace DataMonitor.DQ.Infrastructure.DataRepository.Models
         public string CreateOnStr { get; set; }
         public string DeviceName { get; set; }
         public DateTime CreateOn { get; set; }
+
+        [ForeignKey("DeviceId")]
+        public virtual Device Device { get; set; }
 
     }
 }

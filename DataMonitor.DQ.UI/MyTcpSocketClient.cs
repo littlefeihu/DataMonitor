@@ -88,18 +88,40 @@ namespace DataMonitor.DQ.UI
         {
             var msgItem = new MsgItem(e.Data, e.DataOffset, e.DataLength);
 
+            #region 历史数据接收
             if (msgItem.CommandHex == "06AA")
             {//历史数据处理
                 if (msgItem.BodyLengthHex == "06")
                 {//包数解析
-                    new GetPackageCountAction().Excute(msgItem.BodyBytes);
+
+                    //new GetPackageCountAction().Excute(msgItem.BodyBytes);
+                    //历史总条数
+                    byte[] temp = new byte[2];
+                    Array.Copy(msgItem.BodyBytes, 0, temp, 0, 2);
+                    int hisTotal = DataHelper.ConvertToIntFromHex(DataHelper.byteToHexStr(temp.Reverse().ToArray()));
+                    //历史总包数
+                    Array.Copy(msgItem.BodyBytes, 2, temp, 0, 2);
+                    int hisPackageTotal = DataHelper.ConvertToIntFromHex(DataHelper.byteToHexStr(temp.Reverse().ToArray()));
+
+                    Console.WriteLine("历史总条数{0},历史总包数{1}", hisTotal, hisPackageTotal);
+
+                    for (int i = 0; i < hisPackageTotal; i++)
+                    {
+                        string cmdText = string.Format("25{0}06AA0066", msgItem.DeviceAddressHex);
+                        var cmdbytes = new GetDataCommand(cmdText).GetCommandBytes();
+                        Client.Send(cmdbytes);
+                    }
+
                 }
                 else
                 {//包内容解析
                     new DownloadHistoryDataAction().Excute(msgItem.BodyBytes);
                 }
             }
+            #endregion
 
+
+            #region 实时数据接收
             if (ServerDataReceived != null)
             {
                 if (msgItem.CommandHex == "01FF")
@@ -108,10 +130,10 @@ namespace DataMonitor.DQ.UI
                     var data = new DataParser(msgItem.BodyBytes);
 
                     ServerDataReceived(msgItem.DeviceAddressHex, data.Temperature.ToString(), data.Humidity.ToString());
-
                 }
 
             }
+            #endregion
         }
     }
 }

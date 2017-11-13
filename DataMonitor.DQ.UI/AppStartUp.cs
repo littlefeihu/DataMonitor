@@ -1,6 +1,8 @@
 ﻿using Cowboy.Sockets;
 using DataMonitor.DQ.BusinessLayer;
 using DataMonitor.DQ.Infrastructure;
+using DataMonitor.DQ.Infrastructure.DataRepository.Models;
+using DataMonitor.DQ.Infrastructure.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +19,13 @@ namespace DataMonitor.DQ.UI
 
         public static List<MyTcpSocketClient> Clients = new List<MyTcpSocketClient>();
 
+        public static Queue<RealtimeRecord> RecordTasks = new Queue<RealtimeRecord>();
+
         public static event Action<List<MyTcpSocketClient>> StartCompleted;
+
+        private static bool isRuning = false;
+
+        public static List<Device> Devices = new List<Device>();
 
         public static void Start()
         {
@@ -64,6 +72,57 @@ namespace DataMonitor.DQ.UI
                 client.ShutDown();
             }
         }
+
+
+        public static void AddRecordTask(RealtimeRecord record)
+        {
+            RecordTasks.Enqueue(record);
+
+            if (!isRuning)
+            {
+                Task.Run(() =>
+                {
+
+                    try
+                    {
+                        isRuning = true;
+                        IList<MonitoringRecord> records = new List<MonitoringRecord>();
+
+                        do
+                        {
+                            var realtimeRecord = RecordTasks.Dequeue();
+                            var deviceitem = DeviceItems.FirstOrDefault(o => o.Device.DeviceNum == realtimeRecord.DeviceAddressHex);
+                            records.Add(new MonitoringRecord
+                            {
+                                CreateOn = DateTime.Now,
+                                CreateOnStr = string.Format("{0:yyyy年MM月dd日HH时mm分}", DateTime.Now),
+                                DeviceId = deviceitem.Device.Id,
+                                DeviceName = deviceitem.Device.DeviceName,
+                                DeviceNum = deviceitem.Device.DeviceNum,
+                                Humidity = realtimeRecord.Humidity,
+                                Temperature = realtimeRecord.Temperature,
+                                Latitude = "",
+                                Longitude = ""
+                            });
+
+                            if (records.Count > 50)
+                            {
+                                break;
+                            }
+
+                        } while (RecordTasks.Count > 0);
+
+                        MonitoringRecordService.SaveRecords(records);
+                    }
+                    catch (Exception ex)
+                    {
+                        isRuning = false;
+                    }
+                });
+            }
+
+        }
+
 
 
     }

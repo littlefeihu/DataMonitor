@@ -18,7 +18,6 @@ namespace DataMonitor.DQ.UI
 
         public Device Device { get; private set; }
 
-
         public MyTcpSocketClient Client { get; private set; }
 
 
