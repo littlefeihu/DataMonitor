@@ -1,8 +1,5 @@
 E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\bin\Debug\DataMonitor.DQ.BusinessLayer.dll
 E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\bin\Debug\DataMonitor.DQ.BusinessLayer.pdb
-E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\obj\Debug\DataMonitor.DQ.BusinessLayer.csprojResolveAssemblyReference.cache
-E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\obj\Debug\DataMonitor.DQ.BusinessLayer.dll
-E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\obj\Debug\DataMonitor.DQ.BusinessLayer.pdb
 E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\bin\Debug\DataMonitor.DQ.Infrastructure.dll
 E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\bin\Debug\EntityFramework.dll
 E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
@@ -11,3 +8,6 @@ E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\bin\Debug\DataMonitor.DQ.Infr
 E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\bin\Debug\EntityFramework.xml
 E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
 E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\bin\Debug\Newtonsoft.Json.xml
+E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\obj\Debug\DataMonitor.DQ.BusinessLayer.csprojResolveAssemblyReference.cache
+E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\obj\Debug\DataMonitor.DQ.BusinessLayer.dll
+E:\工作\DataMonitor\DataMonitor.DQ.BusinessLayer\obj\Debug\DataMonitor.DQ.BusinessLayer.pdb

@@ -1,5 +1,6 @@
 ﻿using Cowboy.Sockets;
 using DataMonitor.DQ.Infrastructure;
+using DataMonitor.DQ.Infrastructure.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -92,7 +93,7 @@ namespace DataMonitor.DQ.UI
             if (msgItem.CommandHex == "06AA")
             {//历史数据处理
                 if (msgItem.BodyLengthHex == "06")
-                {//包数解析
+                {//包数解析（测点设备上有多少个包多少条记录）
 
                     //new GetPackageCountAction().Excute(msgItem.BodyBytes);
                     //历史总条数
@@ -111,11 +112,10 @@ namespace DataMonitor.DQ.UI
                         var cmdbytes = new GetDataCommand(cmdText).GetCommandBytes();
                         Client.Send(cmdbytes);
                     }
-
                 }
                 else
-                {//包内容解析
-                    new DownloadHistoryDataAction().Excute(msgItem.BodyBytes);
+                {//包内容解析（具体包内容解析）
+                    var hisRecords = ParsePackageContent(msgItem);
                 }
             }
             #endregion
@@ -130,10 +130,78 @@ namespace DataMonitor.DQ.UI
                     var data = new DataParser(msgItem.BodyBytes);
 
                     ServerDataReceived(msgItem.DeviceAddressHex, data.Temperature.ToString(), data.Humidity.ToString());
+
+                    AppStartUp.AddRecordTask(new Infrastructure.DTO.RealtimeRecord
+                    {
+                        DeviceAddressHex = msgItem.DeviceAddressHex,
+                        Humidity = data.Humidity,
+                        Temperature = data.Temperature
+                    });
                 }
 
             }
             #endregion
         }
+
+
+
+        private IEnumerable<HisRecord> ParsePackageContent(MsgItem item)
+        {
+            var body = item.BodyBytes;
+            //测试数据解析
+            //body = DataHelper.HexStrTobyte("0100 17 08 07 14 48 33 01 E9 01 17 08 07 14 49 33 01 EA 01 17 08 07 14 50 33 01 EA 01 17 08 07 14 51 33 01 EA0117080714523301EC01".Replace(" ", ""));
+            //包索引
+            byte[] temp = new byte[2];
+            Array.Copy(body, 0, temp, 0, 2);
+            int packageIndex = DataHelper.ConvertToIntFromHex(DataHelper.byteToHexStr(temp));
+            byte[] recordBytes = new byte[body.Length - 2];
+            int recordLength = 9;
+            //构造历史记录byte数组
+            Array.Copy(body, 2, recordBytes, 0, body.Length - 2);
+            List<byte[]> records = new List<byte[]>();
+            for (int i = 0; i < recordBytes.Length; i += recordLength)
+            {
+                temp = new byte[recordLength];
+                Array.Copy(recordBytes, i, temp, 0, recordLength);
+                records.Add(temp);
+            }
+
+            //打印历史温湿度记录信息
+            foreach (var record in records)
+            {
+                //17 08 07 14 48 33 01 E9 01
+                temp = new byte[5];
+                Array.Copy(record, 0, temp, 0, 5);
+                string year = temp[0].ToString("X2");
+                string month = temp[1].ToString("X2");
+                string day = temp[2].ToString("X2");
+                string hour = temp[3].ToString("X2");
+                string minute = temp[4].ToString("X2");
+                //温度
+                temp = new byte[2];
+                Array.Copy(record, 5, temp, 0, 2);
+                var temperature = DataHelper.ConvertToIntFromHex(DataHelper.byteToHexStr(temp.Reverse().ToArray())) * 0.1;
+                //湿度
+                Array.Copy(record, 7, temp, 0, 2);
+                var humidity = DataHelper.ConvertToIntFromHex(DataHelper.byteToHexStr(temp.Reverse().ToArray())) * 0.1;
+
+
+                var dateStr = string.Format("{0}年{1}月{2}日{3}时{4}分", year, month, day, hour, minute);
+
+                yield return new HisRecord
+                  {
+                      Temperature = decimal.Parse(temperature.ToString()),
+                      Humidity = decimal.Parse(humidity.ToString()),
+                      DatetimeStr = dateStr,
+                      DeviceAddressHex = item.DeviceAddressHex
+                  };
+            }
+
+
+        }
+
+
+
+
     }
 }

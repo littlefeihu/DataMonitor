@@ -27,6 +27,8 @@ namespace DataMonitor.DQ.UI
 
         public static List<Device> Devices = new List<Device>();
 
+        private static object addTaskLock = new object();
+
         public static void Start()
         {
             var alldevices = DeviceService.GetAllDevices();
@@ -76,51 +78,51 @@ namespace DataMonitor.DQ.UI
 
         public static void AddRecordTask(RealtimeRecord record)
         {
-            RecordTasks.Enqueue(record);
-
-            if (!isRuning)
+            lock (addTaskLock)
             {
-                Task.Run(() =>
+                RecordTasks.Enqueue(record);
+
+                if (!isRuning)
                 {
-
-                    try
+                    Task.Run(() =>
                     {
-                        isRuning = true;
-                        IList<MonitoringRecord> records = new List<MonitoringRecord>();
-
-                        do
+                        try
                         {
-                            var realtimeRecord = RecordTasks.Dequeue();
-                            var deviceitem = DeviceItems.FirstOrDefault(o => o.Device.DeviceNum == realtimeRecord.DeviceAddressHex);
-                            records.Add(new MonitoringRecord
+                            isRuning = true;
+                            IList<MonitoringRecord> records = new List<MonitoringRecord>();
+                            do
                             {
-                                CreateOn = DateTime.Now,
-                                CreateOnStr = string.Format("{0:yyyy年MM月dd日HH时mm分}", DateTime.Now),
-                                DeviceId = deviceitem.Device.Id,
-                                DeviceName = deviceitem.Device.DeviceName,
-                                DeviceNum = deviceitem.Device.DeviceNum,
-                                Humidity = realtimeRecord.Humidity,
-                                Temperature = realtimeRecord.Temperature,
-                                Latitude = "",
-                                Longitude = ""
-                            });
+                                var realtimeRecord = RecordTasks.Dequeue();
+                                var deviceitem = DeviceItems.FirstOrDefault(o => o.Device.DeviceNum == realtimeRecord.DeviceAddressHex);
+                                records.Add(new MonitoringRecord
+                                {
+                                    CreateOn = DateTime.Now,
+                                    CreateOnStr = string.Format("{0:yyyy年MM月dd日HH时mm分}", DateTime.Now),
+                                    DeviceId = deviceitem.Device.Id,
+                                    DeviceName = deviceitem.Device.DeviceName,
+                                    DeviceNum = deviceitem.Device.DeviceNum,
+                                    Humidity = realtimeRecord.Humidity,
+                                    Temperature = realtimeRecord.Temperature,
+                                    Latitude = "",
+                                    Longitude = ""
+                                });
 
-                            if (records.Count > 50)
-                            {
-                                break;
-                            }
+                                if (records.Count > 50)
+                                {
+                                    break;
+                                }
 
-                        } while (RecordTasks.Count > 0);
+                            } while (RecordTasks.Count > 0);
 
-                        MonitoringRecordService.SaveRecords(records);
-                    }
-                    catch (Exception ex)
-                    {
-                        isRuning = false;
-                    }
-                });
+                            MonitoringRecordService.SaveRecords(records);
+                        }
+                        catch (Exception ex)
+                        {
+                            isRuning = false;
+                        }
+                    });
+                }
             }
-
         }
 
 

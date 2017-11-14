@@ -22,7 +22,7 @@ namespace DataMonitor.DQ.Infrastructure
         /// <summary>
         /// 温度
         /// </summary>
-        public double Temperature
+        public decimal Temperature
         {
             get
             {
@@ -33,7 +33,7 @@ namespace DataMonitor.DQ.Infrastructure
         /// <summary>
         /// 湿度
         /// </summary>
-        public double Humidity
+        public decimal Humidity
         {
             get
             {
@@ -43,7 +43,7 @@ namespace DataMonitor.DQ.Infrastructure
         }
 
 
-        private double ConvertData()
+        private decimal ConvertData()
         {
 
             var data = DataHelper.ConvertToIntFromHex(DataHelper.byteToHexStr(temp.Reverse().ToArray()));
@@ -59,7 +59,7 @@ namespace DataMonitor.DQ.Infrastructure
             {
                 data = data * 10;
             }
-            return data * 0.01;
+            return decimal.Parse((data * 0.01).ToString());
         }
     }
 }

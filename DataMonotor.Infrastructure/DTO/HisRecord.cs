@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace DataMonitor.DQ.Infrastructure.DTO
 {
     /// <summary>
-    /// 实时数据记录实体
+    /// 历史记录实体
     /// </summary>
-    public class RealtimeRecord
+    public class HisRecord
     {
         public decimal Temperature { get; set; }
 
@@ -17,9 +17,6 @@ namespace DataMonitor.DQ.Infrastructure.DTO
 
         public string DeviceAddressHex { get; set; }
 
-
-
-
-
+        public string DatetimeStr { get; set; }
     }
 }
